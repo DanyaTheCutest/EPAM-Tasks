@@ -23,7 +23,7 @@ namespace AnotherTriangle
             for (int i = n; i > 0; i--)
             {
                 stars = 2 * n - 2 * i + 1;
-                spaces = i-2;
+                spaces = i;
                 while (spaces >= 0)
                 {
                     Console.Write(" ");
