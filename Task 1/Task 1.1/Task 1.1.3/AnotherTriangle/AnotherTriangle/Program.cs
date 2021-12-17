@@ -20,7 +20,7 @@ namespace AnotherTriangle
             
             int spaces;
             int stars;
-            for (int i = n; i >= 0; i--)
+            for (int i = n; i > 0; i--)
             {
                 stars = 2 * n - 2 * i + 1;
                 spaces = i;
