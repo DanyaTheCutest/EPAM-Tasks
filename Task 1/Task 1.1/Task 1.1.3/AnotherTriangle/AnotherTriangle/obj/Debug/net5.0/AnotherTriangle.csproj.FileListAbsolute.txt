@@ -1,0 +1,16 @@
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.3\AnotherTriangle\AnotherTriangle\bin\Debug\net5.0\AnotherTriangle.exe
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.3\AnotherTriangle\AnotherTriangle\bin\Debug\net5.0\AnotherTriangle.deps.json
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.3\AnotherTriangle\AnotherTriangle\bin\Debug\net5.0\AnotherTriangle.runtimeconfig.json
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.3\AnotherTriangle\AnotherTriangle\bin\Debug\net5.0\AnotherTriangle.runtimeconfig.dev.json
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.3\AnotherTriangle\AnotherTriangle\bin\Debug\net5.0\AnotherTriangle.dll
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.3\AnotherTriangle\AnotherTriangle\bin\Debug\net5.0\ref\AnotherTriangle.dll
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.3\AnotherTriangle\AnotherTriangle\bin\Debug\net5.0\AnotherTriangle.pdb
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.3\AnotherTriangle\AnotherTriangle\obj\Debug\net5.0\AnotherTriangle.csproj.AssemblyReference.cache
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.3\AnotherTriangle\AnotherTriangle\obj\Debug\net5.0\AnotherTriangle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.3\AnotherTriangle\AnotherTriangle\obj\Debug\net5.0\AnotherTriangle.AssemblyInfoInputs.cache
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.3\AnotherTriangle\AnotherTriangle\obj\Debug\net5.0\AnotherTriangle.AssemblyInfo.cs
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.3\AnotherTriangle\AnotherTriangle\obj\Debug\net5.0\AnotherTriangle.csproj.CoreCompileInputs.cache
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.3\AnotherTriangle\AnotherTriangle\obj\Debug\net5.0\AnotherTriangle.dll
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.3\AnotherTriangle\AnotherTriangle\obj\Debug\net5.0\ref\AnotherTriangle.dll
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.3\AnotherTriangle\AnotherTriangle\obj\Debug\net5.0\AnotherTriangle.pdb
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.3\AnotherTriangle\AnotherTriangle\obj\Debug\net5.0\AnotherTriangle.genruntimeconfig.cache
