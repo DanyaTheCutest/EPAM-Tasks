@@ -1,0 +1,16 @@
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.5\SumOfNumbers\SumOfNumbers\bin\Debug\net5.0\SumOfNumbers.exe
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.5\SumOfNumbers\SumOfNumbers\bin\Debug\net5.0\SumOfNumbers.deps.json
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.5\SumOfNumbers\SumOfNumbers\bin\Debug\net5.0\SumOfNumbers.runtimeconfig.json
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.5\SumOfNumbers\SumOfNumbers\bin\Debug\net5.0\SumOfNumbers.runtimeconfig.dev.json
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.5\SumOfNumbers\SumOfNumbers\bin\Debug\net5.0\SumOfNumbers.dll
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.5\SumOfNumbers\SumOfNumbers\bin\Debug\net5.0\ref\SumOfNumbers.dll
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.5\SumOfNumbers\SumOfNumbers\bin\Debug\net5.0\SumOfNumbers.pdb
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.5\SumOfNumbers\SumOfNumbers\obj\Debug\net5.0\SumOfNumbers.csproj.AssemblyReference.cache
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.5\SumOfNumbers\SumOfNumbers\obj\Debug\net5.0\SumOfNumbers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.5\SumOfNumbers\SumOfNumbers\obj\Debug\net5.0\SumOfNumbers.AssemblyInfoInputs.cache
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.5\SumOfNumbers\SumOfNumbers\obj\Debug\net5.0\SumOfNumbers.AssemblyInfo.cs
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.5\SumOfNumbers\SumOfNumbers\obj\Debug\net5.0\SumOfNumbers.csproj.CoreCompileInputs.cache
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.5\SumOfNumbers\SumOfNumbers\obj\Debug\net5.0\SumOfNumbers.dll
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.5\SumOfNumbers\SumOfNumbers\obj\Debug\net5.0\ref\SumOfNumbers.dll
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.5\SumOfNumbers\SumOfNumbers\obj\Debug\net5.0\SumOfNumbers.pdb
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.5\SumOfNumbers\SumOfNumbers\obj\Debug\net5.0\SumOfNumbers.genruntimeconfig.cache
