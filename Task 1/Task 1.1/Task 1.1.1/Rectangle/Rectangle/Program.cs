@@ -30,6 +30,6 @@ namespace Rectangle
                 return "Некорректное значение b";
 
             return $"Ответ: {a * b}";
-        }
+        }//
     }
 }
