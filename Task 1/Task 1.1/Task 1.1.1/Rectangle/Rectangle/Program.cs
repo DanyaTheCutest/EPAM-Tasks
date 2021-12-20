@@ -6,6 +6,7 @@ namespace Rectangle
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello world");
             Console.WriteLine(GetArea());
         }
         static int ReadInt()
@@ -30,6 +31,7 @@ namespace Rectangle
                 return "Некорректное значение b";
 
             return $"Ответ: {a * b}";
-        }//
+        }
+        
     }
 }
