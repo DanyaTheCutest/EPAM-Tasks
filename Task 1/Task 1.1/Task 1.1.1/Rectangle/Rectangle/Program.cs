@@ -16,18 +16,19 @@ namespace Rectangle
             {
                 Console.Write("Введите значение переменной: ");
                 input = Console.ReadLine();
-            } while (!Int32.TryParse(input, out number));
+            } while (!Int32.TryParse(input, out number) || number <= 0);
+            
             return number;
         }
         static string GetArea()
         {
             int a = ReadInt();
-            if (a <= 0)
-                return "Некорректное значение а";
-
             int b = ReadInt();
-            if (b <= 0)
-                return "Некорректное значение b";
+
+            
+
+
+
 
             return $"Ответ: {a * b}";
         }
