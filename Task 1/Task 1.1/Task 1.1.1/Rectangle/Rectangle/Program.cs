@@ -6,7 +6,6 @@ namespace Rectangle
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello world");
             Console.WriteLine(GetArea());
         }
         static int ReadInt()
