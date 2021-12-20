@@ -8,30 +8,24 @@ namespace Rectangle
         {
             Console.WriteLine(GetArea());
         }
-
-        static string GetArea()
+        static int ReadInt()
         {
             int number;
-            string input = "";
-
-            //Get A
+            string input;
             do
             {
-                Console.Write("Введите значение a: ");
+                Console.Write("Введите значение переменной: ");
                 input = Console.ReadLine();
             } while (!Int32.TryParse(input, out number));
-            int a = number;
+            return number;
+        }
+        static string GetArea()
+        {
+            int a = ReadInt();
             if (a <= 0)
-               return "Некорректное значение а";
+                return "Некорректное значение а";
 
-
-            //Get B
-            do
-            {
-                Console.Write("Введите значение b: ");
-                input = Console.ReadLine();
-            } while (!Int32.TryParse(input, out number));
-            int b = number;
+            int b = ReadInt();
             if (b <= 0)
                 return "Некорректное значение b";
 
