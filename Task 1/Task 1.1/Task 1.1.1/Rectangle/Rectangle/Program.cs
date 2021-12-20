@@ -8,13 +8,13 @@ namespace Rectangle
         {
             Console.WriteLine(GetArea());
         }
-        static int ReadInt()
+        static int ReadPositiveInt()
         {
             int number;
             string input;
             do
             {
-                Console.Write("Введите значение переменной: ");
+                Console.Write("Введите значение переменной больше 0: ");
                 input = Console.ReadLine();
             } while (!Int32.TryParse(input, out number) || number <= 0);
             
@@ -22,14 +22,8 @@ namespace Rectangle
         }
         static string GetArea()
         {
-            int a = ReadInt();
-            int b = ReadInt();
-
-            
-
-
-
-
+            int a = ReadPositiveInt();
+            int b = ReadPositiveInt();
             return $"Ответ: {a * b}";
         }
         
