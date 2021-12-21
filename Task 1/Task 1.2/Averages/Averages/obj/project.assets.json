@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\Averages\\Averages\\Task 1.2.csproj",
-      "projectName": "Task 1.2",
-      "projectPath": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\Averages\\Averages\\Task 1.2.csproj",
+      "projectUniqueName": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\Averages\\Averages\\Task 1.2.1.csproj",
+      "projectName": "Task 1.2.1",
+      "projectPath": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\Averages\\Averages\\Task 1.2.1.csproj",
       "packagesPath": "C:\\Users\\strax\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\Averages\\Averages\\obj\\",
       "projectStyle": "PackageReference",
