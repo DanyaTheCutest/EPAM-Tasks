@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.1\\Tasl 1.1.7\\Array Processing\\Array Processing\\Array Processing.csproj",
+      "projectUniqueName": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.1\\Task 1.1.7\\Array Processing\\Array Processing\\Array Processing.csproj",
       "projectName": "Array Processing",
-      "projectPath": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.1\\Tasl 1.1.7\\Array Processing\\Array Processing\\Array Processing.csproj",
+      "projectPath": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.1\\Task 1.1.7\\Array Processing\\Array Processing\\Array Processing.csproj",
       "packagesPath": "C:\\Users\\strax\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.1\\Tasl 1.1.7\\Array Processing\\Array Processing\\obj\\",
+      "outputPath": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.1\\Task 1.1.7\\Array Processing\\Array Processing\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
