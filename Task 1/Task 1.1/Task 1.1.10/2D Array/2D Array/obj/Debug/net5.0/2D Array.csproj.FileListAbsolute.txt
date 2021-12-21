@@ -1,0 +1,15 @@
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.10\2D Array\2D Array\bin\Debug\net5.0\2D Array.exe
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.10\2D Array\2D Array\bin\Debug\net5.0\2D Array.deps.json
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.10\2D Array\2D Array\bin\Debug\net5.0\2D Array.runtimeconfig.json
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.10\2D Array\2D Array\bin\Debug\net5.0\2D Array.runtimeconfig.dev.json
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.10\2D Array\2D Array\bin\Debug\net5.0\2D Array.dll
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.10\2D Array\2D Array\bin\Debug\net5.0\ref\2D Array.dll
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.10\2D Array\2D Array\bin\Debug\net5.0\2D Array.pdb
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.10\2D Array\2D Array\obj\Debug\net5.0\2D Array.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.10\2D Array\2D Array\obj\Debug\net5.0\2D Array.AssemblyInfoInputs.cache
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.10\2D Array\2D Array\obj\Debug\net5.0\2D Array.AssemblyInfo.cs
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.10\2D Array\2D Array\obj\Debug\net5.0\2D Array.csproj.CoreCompileInputs.cache
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.10\2D Array\2D Array\obj\Debug\net5.0\2D Array.dll
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.10\2D Array\2D Array\obj\Debug\net5.0\ref\2D Array.dll
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.10\2D Array\2D Array\obj\Debug\net5.0\2D Array.pdb
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.1\Task 1.1.10\2D Array\2D Array\obj\Debug\net5.0\2D Array.genruntimeconfig.cache
