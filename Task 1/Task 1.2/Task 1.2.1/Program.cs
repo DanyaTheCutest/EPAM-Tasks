@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace Taskl_1._2._1
+namespace Task_1._2._1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string input = Console.ReadLine(); // Результат округлён в большую сторонул
+            string input = Console.ReadLine(); //Результат округлён в большую сторону
             Console.WriteLine(GetAverage(input));
         }
         static double GetAverage(string str)

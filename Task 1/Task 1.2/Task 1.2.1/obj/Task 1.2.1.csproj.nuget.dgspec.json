@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\1.2.2\\1.2.2.csproj": {}
+    "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\Task 1.2.1\\Task 1.2.1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\1.2.2\\1.2.2.csproj": {
+    "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\Task 1.2.1\\Task 1.2.1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\1.2.2\\1.2.2.csproj",
-        "projectName": "1.2.2",
-        "projectPath": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\1.2.2\\1.2.2.csproj",
+        "projectUniqueName": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\Task 1.2.1\\Task 1.2.1.csproj",
+        "projectName": "Task 1.2.1",
+        "projectPath": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\Task 1.2.1\\Task 1.2.1.csproj",
         "packagesPath": "C:\\Users\\strax\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\1.2.2\\obj\\",
+        "outputPath": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\Task 1.2.1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

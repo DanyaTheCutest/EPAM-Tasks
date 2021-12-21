@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\1.2.2\\1.2.2.csproj",
-      "projectName": "1.2.2",
-      "projectPath": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\1.2.2\\1.2.2.csproj",
+      "projectUniqueName": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\Task 1.2.2\\Task 1.2.2.csproj",
+      "projectName": "Task 1.2.2",
+      "projectPath": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\Task 1.2.2\\Task 1.2.2.csproj",
       "packagesPath": "C:\\Users\\strax\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\1.2.2\\obj\\",
+      "outputPath": "C:\\Users\\strax\\Desktop\\Epam repository\\EPAM-Tasks\\Task 1\\Task 1.2\\Task 1.2.2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
