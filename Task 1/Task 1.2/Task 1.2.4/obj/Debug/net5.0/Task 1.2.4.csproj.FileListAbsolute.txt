@@ -1,0 +1,16 @@
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.4\bin\Debug\net5.0\Task 1.2.4.exe
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.4\bin\Debug\net5.0\Task 1.2.4.deps.json
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.4\bin\Debug\net5.0\Task 1.2.4.runtimeconfig.json
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.4\bin\Debug\net5.0\Task 1.2.4.runtimeconfig.dev.json
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.4\bin\Debug\net5.0\Task 1.2.4.dll
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.4\bin\Debug\net5.0\ref\Task 1.2.4.dll
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.4\bin\Debug\net5.0\Task 1.2.4.pdb
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.4\obj\Debug\net5.0\Task 1.2.4.csproj.AssemblyReference.cache
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.4\obj\Debug\net5.0\Task 1.2.4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.4\obj\Debug\net5.0\Task 1.2.4.AssemblyInfoInputs.cache
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.4\obj\Debug\net5.0\Task 1.2.4.AssemblyInfo.cs
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.4\obj\Debug\net5.0\Task 1.2.4.csproj.CoreCompileInputs.cache
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.4\obj\Debug\net5.0\Task 1.2.4.dll
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.4\obj\Debug\net5.0\ref\Task 1.2.4.dll
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.4\obj\Debug\net5.0\Task 1.2.4.pdb
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.4\obj\Debug\net5.0\Task 1.2.4.genruntimeconfig.cache
