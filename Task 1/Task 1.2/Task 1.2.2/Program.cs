@@ -13,9 +13,17 @@ namespace Task_1._2._2
         }
         static string Doubler(string inputString, string doublerString)
         {
-            //TODO
+            string resultString = "";
+            var arr = inputString.ToCharArray();
 
-            return null;
+            for (int i = 0; i < inputString.Length; i++)
+            {
+                if (doublerString.Contains(arr[i]) && Char.IsLetterOrDigit(arr[i]))
+                    resultString += arr[i].ToString() + arr[i].ToString();
+                else resultString += arr[i].ToString();
+            }
+
+            return resultString;
         }
     }
 }
