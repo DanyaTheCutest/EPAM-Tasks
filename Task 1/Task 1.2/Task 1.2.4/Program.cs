@@ -6,6 +6,7 @@ namespace Task_1._2._4
     {
         static void Main(string[] args)
         {
+            Console.Write("Введите строку: ");
             string input = Console.ReadLine();
             Console.WriteLine(Validator(input));
         }
@@ -13,8 +14,8 @@ namespace Task_1._2._4
         {
             string result = "";
             var arr = input.ToCharArray();
-            result += Char.ToUpper(arr[0]).ToString() + " ";
-
+            result += Char.ToUpper(arr[0]).ToString();
+            result += arr[1].ToString();
             for (int i = 2; i < arr.Length; i++)
             {
                 if (isEndMark(arr[i-2]) && Char.IsLetter(arr[i]))
@@ -24,11 +25,10 @@ namespace Task_1._2._4
 
             return result;
         }
-        static bool isEndMark(char c)
-        {
-            if ((int)c == 33 || (int)c == 46 || (int)c == 63)
-                return true;           
-            return false;
-        }
+        static bool isEndMark(char c) =>
+            c == '.' || c == '?' || c == '!';
+        
+            
+                
     }
 }
