@@ -6,16 +6,12 @@ namespace AnotherTriangle
     {
         static void Main(string[] args)
         {
+            Console.Write("Введите значение N: ");
             DrawTriangle();
         }
         static void DrawTriangle()
         {
-            int n;
-            string input;
-            do
-            {
-                input = Console.ReadLine();
-            } while (!Int32.TryParse(input, out n));
+            var n = ReadInt();
             Console.Clear();
             
             int spaces;
@@ -37,6 +33,16 @@ namespace AnotherTriangle
                     stars--;
                 }                
             }
+        }
+        static int ReadInt()
+        {
+            int n;
+            string input;
+            do
+            {
+                input = Console.ReadLine();
+            } while (!Int32.TryParse(input, out n));
+            return n;
         }
     }
 }
