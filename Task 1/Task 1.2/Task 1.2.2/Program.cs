@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Text;
 namespace Task_1._2._2
 {
     class Program
@@ -13,17 +13,17 @@ namespace Task_1._2._2
         }
         static string Doubler(string inputString, string doublerString)
         {
-            string resultString = "";
+            StringBuilder resultString = new StringBuilder("");
             var arr = inputString.ToCharArray();
 
             for (int i = 0; i < inputString.Length; i++)
             {
                 if (doublerString.Contains(arr[i]) && Char.IsLetterOrDigit(arr[i]))
-                    resultString += arr[i].ToString() + arr[i].ToString();
-                else resultString += arr[i].ToString();
+                    resultString.Append(arr[i].ToString() + arr[i].ToString());
+                else resultString.Append(arr[i].ToString());
             }
 
-            return resultString;
+            return resultString.ToString();
         }
     }
 }
