@@ -12,7 +12,7 @@ namespace SumOfNumbers
                 if (i % 3 == 0 || i % 5 == 0)
                     sum += i;
             }
-            Console.WriteLine(sum);                       
+            Console.WriteLine($"Сумма чисел от 1 до 1000, кратных 3 или 5 равна {sum}");                       
         }
     }
 }
