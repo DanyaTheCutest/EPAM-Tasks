@@ -6,15 +6,12 @@ namespace X_MAS_Tree
     {
         static void Main(string[] args)
         {
-
-            int n;
-            string input;
-            do
-            {
-                input = Console.ReadLine();
-            } while (!Int32.TryParse(input, out n));
-
-
+            DrawTree();          
+        }
+        
+        static void DrawTree()
+        {
+            int n = ReadInt();
             for (int i = 1; i <= n; i++)
             {
                 for (int j = 0; j < i; j++)
@@ -23,6 +20,17 @@ namespace X_MAS_Tree
                     Console.WriteLine(branch.PadLeft(n + 3) + "*" + branch);
                 }
             }
-        }                                 
+        }
+        static int ReadInt()
+        {
+            int n;
+            string input;
+            do
+            {
+                Console.Write("Введите число N, большее 0: ");
+                input = Console.ReadLine();
+            } while (!Int32.TryParse(input, out n) || n <= 0);
+            return n;
+        }
     }
 }
