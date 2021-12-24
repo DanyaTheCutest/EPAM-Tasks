@@ -6,10 +6,12 @@ namespace Task_1._2._2
     {
         static void Main(string[] args)
         {
+            Console.Write("Введите начальную строку: ");
             string inputString = Console.ReadLine();
+            Console.Write("Введите строку с символами для удвоения: ");
             string doublerString = Console.ReadLine();
 
-            Console.WriteLine(Doubler(inputString, doublerString));
+            Console.WriteLine($"Результат: {Doubler(inputString, doublerString)}");
         }
         static string Doubler(string inputString, string doublerString)
         {
@@ -19,8 +21,11 @@ namespace Task_1._2._2
             for (int i = 0; i < inputString.Length; i++)
             {
                 if (doublerString.Contains(arr[i]) && Char.IsLetterOrDigit(arr[i]))
-                    resultString.Append(arr[i].ToString() + arr[i].ToString());
-                else resultString.Append(arr[i].ToString());
+                {
+                    resultString.Append(arr[i]);
+                    resultString.Append(arr[i]);
+                }
+                else resultString.Append(arr[i]);
             }
 
             return resultString.ToString();

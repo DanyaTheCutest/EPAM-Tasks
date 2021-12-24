@@ -6,8 +6,9 @@ namespace Task_1._2._1
     {
         static void Main(string[] args)
         {
+            Console.Write("Введите строку: ");
             string input = Console.ReadLine(); //Результат округлён в большую сторону
-            Console.WriteLine(GetAverage(input));
+            Console.WriteLine($"Средняя длина слова: {GetAverage(input)}");
         }
         static double GetAverage(string str)
         {

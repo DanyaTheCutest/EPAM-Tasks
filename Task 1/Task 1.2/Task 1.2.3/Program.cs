@@ -7,8 +7,9 @@ namespace Task_1._2._3
         static void Main(string[] args)
         {
             // Со *
+            Console.Write("Введите строку: ");
             string input = Console.ReadLine();
-            Console.WriteLine(CountLower(input));
+            Console.WriteLine($"Количество слов, начинающихся с маленькой буквы: {CountLower(input)}");
         }
         static int CountLower(string input)
         {

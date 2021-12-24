@@ -13,3 +13,4 @@ C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.1\obj
 C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.1\obj\Debug\net5.0\ref\Task 1.2.1.dll
 C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.1\obj\Debug\net5.0\Task 1.2.1.pdb
 C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.1\obj\Debug\net5.0\Task 1.2.1.genruntimeconfig.cache
+C:\Users\strax\Desktop\Epam repository\EPAM-Tasks\Task 1\Task 1.2\Task 1.2.1\obj\Debug\net5.0\Task 1.2.1.csproj.AssemblyReference.cache
