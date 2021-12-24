@@ -5,8 +5,7 @@ namespace AnotherTriangle
     class Program
     {
         static void Main(string[] args)
-        {
-            Console.Write("Введите значение N: ");
+        {            
             DrawTriangle();
         }
         static void DrawTriangle()
@@ -36,12 +35,13 @@ namespace AnotherTriangle
         }
         static int ReadInt()
         {
-            int n;
+            int n = 0;
             string input;
             do
             {
+                Console.Write("Введите значение N, большее 0: ");
                 input = Console.ReadLine();
-            } while (!Int32.TryParse(input, out n));
+            } while (!Int32.TryParse(input, out n) || n <= 0);
             return n;
         }
     }
