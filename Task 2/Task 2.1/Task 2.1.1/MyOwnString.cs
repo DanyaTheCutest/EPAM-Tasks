@@ -8,12 +8,23 @@ namespace Task_2._1._1
 {
     public class MyOwnString
     {
-        public char[] superString;
-        
+        private char[] _superString;
+
+        public char[] Mystring 
+        {
+            get
+            {
+                return _superString;
+            }
+            set
+            {
+                _superString = value;
+            } 
+        }
 
         public MyOwnString(char[] superString)
         {
-            this.superString = superString;
+            Mystring = superString;
         }
         
         public bool IsEqual(char[] string_1, char[] string_2)
@@ -28,45 +39,52 @@ namespace Task_2._1._1
             return true;
         }
 
-        public void ConcatStrings(char c)
+        public char[] ConcatStrings(char c)
         {
-            char[] result = new char[superString.Length + 1];
-            superString.CopyTo(result, 0);
+            var result = new char[Mystring.Length + 1];
+            Mystring.CopyTo(result, 0);
             result[result.Length - 1] = c;
-            superString = result;
+            return result;
         }
-        public void ConcatStrings(MyOwnString anotherString)
+        public char[] ConcatStrings(MyOwnString anotherString)
         {
-            char[] result = new char[superString.Length + anotherString.superString.Length];
-            superString.CopyTo(result, 0);
-            anotherString.superString.CopyTo(result, superString.Length);
-            superString = result;
+            var result = new char[Mystring.Length + anotherString.Mystring.Length];
+            Mystring.CopyTo(result, 0);
+            anotherString.Mystring.CopyTo(result, Mystring.Length);
+            return result;
             
         }
 
         public int FindSymbolIndex(char c)
         {
-             if (superString.Contains(c))
+             if (Mystring.Contains(c))
              {
-                for (int i = 0; i < superString.Length; i++)
+                for (int i = 0; i < Mystring.Length; i++)
                 {
-                    if (superString[i] == c)
+                    if (Mystring[i] == c)
                         return i;
                 }
              }
             return -1;
         }
-        public string GetString()
-        {
-            return superString.ToString();         
-        }
+        public char[] GetString() => Mystring;
 
         public char[] ConvertToString(string input) => input.ToCharArray();
-        
-            
-        
 
-        public int ConvertFromString(MyOwnString convert) => 
-            Convert.ToInt32(convert.superString.ToString());
+
+        public override string ToString()
+        {
+            string output = "";
+            for (int i = 0; i < Mystring.Length; i++)
+            {
+                output += Mystring[i];
+            }
+            return output;
+        }
+
+        public static int ConvertToInt(MyOwnString convertString) => 
+            Convert.ToInt32(convertString.Mystring.ToString());
+        public static double ConvertToDouble(MyOwnString convertString) =>
+            Convert.ToDouble(convertString.Mystring.ToString());
     }
 }

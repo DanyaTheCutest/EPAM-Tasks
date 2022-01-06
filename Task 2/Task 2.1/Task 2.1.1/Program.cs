@@ -12,10 +12,11 @@ namespace Task_2._1._1
             MyOwnString myString = new MyOwnString(mySuperString);
             MyOwnString myString_2 = new MyOwnString(mySuperString_2);
 
-            myString.ConcatStrings(myString_2);
-            Console.WriteLine(myString.FindSymbolIndex('w'));
-            myString.superString = myString.ConvertToString();
-            myString.PrintString();
+            myString.Mystring = myString.ConcatStrings(myString_2);
+            for (int i = 0; i < myString.Mystring.Length; i++)
+            {
+                Console.Write(myString.Mystring[i]);
+            }
 
         }
     }
