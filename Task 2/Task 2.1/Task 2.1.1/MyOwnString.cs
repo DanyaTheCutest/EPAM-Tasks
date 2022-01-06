@@ -56,19 +56,15 @@ namespace Task_2._1._1
              }
             return -1;
         }
-        public void PrintString()
+        public string GetString()
         {
-            for (int i = 0; i < superString.Length; i++)
-            {
-                Console.Write(superString[i]);
-            }           
+            return superString.ToString();         
         }
 
-        public char[] ConvertToString()
-        {
-            Console.Write("Enter a string: ");
-            return Console.ReadLine().ToCharArray();
-        }
+        public char[] ConvertToString(string input) => input.ToCharArray();
+        
+            
+        
 
         public int ConvertFromString(MyOwnString convert) => 
             Convert.ToInt32(convert.superString.ToString());
