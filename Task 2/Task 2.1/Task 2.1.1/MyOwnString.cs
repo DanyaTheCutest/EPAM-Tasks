@@ -56,7 +56,7 @@ namespace Task_2._1._1
             return -1;
         }
 
-        public char[] GetString()
+        public char[] ToCharArray()
         {
             var copy = new char[_superString.Length];
             for (int i = 0; i < copy.Length; i++)
@@ -65,8 +65,6 @@ namespace Task_2._1._1
             }
             return copy;
         }
-
-        public char[] ConvertToMyString(string input) => input.ToCharArray();
 
         public override string ToString()
         {
@@ -77,5 +75,11 @@ namespace Task_2._1._1
             Convert.ToInt32(convertString.ToString());
         public static double ConvertToDouble(MyOwnString convertString) =>
             Convert.ToDouble(convertString.ToString());
+
+        public char this[int index]
+        {
+            get => _superString[index];
+            set => _superString[index] = value;
+        }
     }
 }

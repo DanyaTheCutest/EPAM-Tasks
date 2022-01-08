@@ -14,8 +14,8 @@ namespace Task_2._1._1
             MyOwnString concatResultString = new MyOwnString(myString.ConcatStrings(myString_2));
 
             Console.WriteLine(concatResultString.ToString());
-            
-            
+
+            Console.WriteLine(myString[0]);
 
         }
     }
