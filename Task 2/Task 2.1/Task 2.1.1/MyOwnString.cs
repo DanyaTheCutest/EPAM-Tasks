@@ -79,7 +79,7 @@ namespace Task_2._1._1
         public char this[int index]
         {
             get => _superString[index];
-            set => _superString[index] = value;
+            private set => _superString[index] = value;
         }
     }
 }
