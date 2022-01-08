@@ -1,4 +1,5 @@
 ﻿using System;
+using MyOwnString;
 
 namespace Task_2._1._1
 {
