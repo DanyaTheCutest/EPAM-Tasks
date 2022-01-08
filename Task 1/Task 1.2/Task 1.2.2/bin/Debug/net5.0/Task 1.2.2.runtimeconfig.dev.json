@@ -1,9 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\strax\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\strax\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
-    ]
-  }
-}
