@@ -8,7 +8,7 @@ namespace Task_1._2._4
         {
             Console.Write("Введите строку: ");
             string input = Console.ReadLine();
-            Console.WriteLine($"Результат: {Validator(input)}");
+            Console.WriteLine($"Результат: {Validate(input)}");
         }
         static string Validate(string input)
         {
