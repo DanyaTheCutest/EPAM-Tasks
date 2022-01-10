@@ -35,9 +35,6 @@ namespace Task_2._1._2
             _length = Math.Sqrt(Math.Pow((end.CoordinateX - start.CoordinateX), 2) +
                       Math.Pow((end.CoordinateY - start.CoordinateY), 2));
 
-
-
-
         public double Length
         {
             get => _length;
