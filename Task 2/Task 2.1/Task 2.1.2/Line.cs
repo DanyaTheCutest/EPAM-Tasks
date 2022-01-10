@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task_2._1._2
 {
-    public class Line : Point
+    public class Line 
     {
         private Point _startPoint;
         private Point _endPoint;
@@ -21,9 +21,19 @@ namespace Task_2._1._2
             SetLength(start, end);
         }
 
-        
+        public double[] StartCoordinates
+        {
+            get => new double[2] { _startPoint.CoordinateX, _startPoint.CoordinateY };
+        }
+
+        public double[] EndCoordinates
+        {
+            get => new double[2] { _endPoint.CoordinateX, _endPoint.CoordinateY };
+        }
+
         private void SetLength(Point start, Point end) =>
-            _length = end.CoordinateX - start.CoordinateX + end.CoordinateY - start.CoordinateY;
+            _length = Math.Sqrt(Math.Pow((end.CoordinateX - start.CoordinateX), 2) +
+                      Math.Pow((end.CoordinateY - start.CoordinateY), 2));
 
 
 

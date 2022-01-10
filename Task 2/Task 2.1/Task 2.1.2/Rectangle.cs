@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task_2._1._2
 {
-    public class Rectangle : Square
+    public class Rectangle 
     {
         private Square _sideA;
         private Square _sideB;
@@ -21,25 +21,25 @@ namespace Task_2._1._2
 
         }
 
-        public int SideA
-        {
-            get => _sideA.Side;
-            set
-            {
-                if (value > 0)
-                    _sideA.Side = value;
-            }
-        }
+        //public int SideA
+        //{
+        //    get => _sideA.Side;
+        //    set
+        //    {
+        //        if (value > 0)
+        //            _sideA.Side = value;
+        //    }
+        //}
 
-        public int SideB
-        {
-            get => _sideB.Side;
-            set
-            {
-                if (value > 0)
-                    _sideB.Side = value;
-            }
-        }
+        //public int SideB
+        //{
+        //    get => _sideB.Side;
+        //    set
+        //    {
+        //        if (value > 0)
+        //            _sideB.Side = value;
+        //    }
+        //}
 
 
 

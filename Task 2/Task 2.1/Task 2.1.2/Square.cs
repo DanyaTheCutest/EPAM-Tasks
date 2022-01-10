@@ -8,35 +8,44 @@ namespace Task_2._1._2
 {
     public class Square 
     {
-        private int _side = 0;
+        private Line _leftLine;
+        private Line _topLine;
+        private Line _bottomLine;
+        private Line _rightLine;
 
-        public Square()
+        public Square(Line side)
         {
-
-        }
-
-        public Square(int side)
-        {
-            Side = side;
-        }
-        public int Side
-        {
-            get => _side;
-            set
+            if (side.StartCoordinates[0] != side.EndCoordinates[0])
+                throw new Exception("Это не квадрат! У квадрата сторона должна быть прямой!");
+            else
             {
-                if (value > 0)
-                    _side = value;
+                _leftLine = side;
+                DrawSquare(side);
             }
         }
-        public int GetArea()
+
+        private void DrawSquare(Line side)
         {
-            int area = _side * _side;
+             _topLine = new Line(new Point(side.EndCoordinates[0], side.EndCoordinates[1]),
+                new Point(side.StartCoordinates[0] + side.Length, side.EndCoordinates[1]));
+
+             _bottomLine = new Line(new Point(_leftLine.StartCoordinates[0], side.StartCoordinates[1]),
+                new Point(side.StartCoordinates[0] + side.Length, side.StartCoordinates[1]));
+
+             _rightLine = new Line(new Point(_leftLine.StartCoordinates[0] + side.Length, side.StartCoordinates[1]),
+                new Point(side.StartCoordinates[0] + side.Length, side.EndCoordinates[1]));
+                        
+        }
+
+        public double GetArea()
+        {
+            double area = _leftLine.Length * _leftLine.Length;
             return area;
         }
 
-        public int GetPerimeter()
+        public double GetPerimeter()
         {
-            int perimeter = _side * 4;
+            double perimeter = _leftLine.Length * 4;
             return perimeter;
         }
 

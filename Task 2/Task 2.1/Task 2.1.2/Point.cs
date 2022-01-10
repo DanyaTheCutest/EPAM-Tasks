@@ -16,7 +16,8 @@ namespace Task_2._1._2
             get => _coordinateX;
             private set
             {
-                _coordinateX = value;
+                if (value > 0)
+                    _coordinateX = value;
             }
         }
         public double CoordinateY
@@ -24,7 +25,8 @@ namespace Task_2._1._2
             get => _coordinateY;
             private set
             {
-                _coordinateY = value;
+                if (value >= 0)
+                    _coordinateY = value;
             }
         }
 
@@ -34,10 +36,6 @@ namespace Task_2._1._2
             CoordinateY = y;
         }
         
-        public Point()
-        {
-            CoordinateX = 0;
-            CoordinateY = 0;
-        }
+        
     }
 }

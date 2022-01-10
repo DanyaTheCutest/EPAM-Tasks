@@ -6,8 +6,14 @@ namespace Task_2._1._2
     {
         static void Main(string[] args)
         {
-            var point = new Point(1.2, 1.1);
-            var line = new Line(0.0, 1.2);
+            var point = new Point(0, 0);
+            var point2 = new Point(2, 2);
+
+            var Line = new Line(point, point2);
+            Console.WriteLine(Line.Length);
+
+            var square = new Square(Line);
+
         }
     }
 }
