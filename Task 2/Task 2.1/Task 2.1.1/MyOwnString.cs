@@ -59,10 +59,7 @@ namespace Task_2._1._1
         public char[] ToCharArray()
         {
             var copy = new char[_superString.Length];
-            for (int i = 0; i < copy.Length; i++)
-            {
-                copy[i] = _superString[i];
-            }
+            _superString.CopyTo(copy, 0);
             return copy;
         }
 
