@@ -6,35 +6,32 @@ using System.Threading.Tasks;
 
 namespace Task_2._1._2
 {
-    public class Ring : Circle
+    public class Ring 
     {
-        Circle InnerCircle = new Circle();
-        Circle OuterCircle = new Circle();
-        private double _ringArea;
-        private double _ringLength;
+        private Circle _innerCircle;
+        private Circle _outerCircle;
+        
 
-        public Ring(double x, double y, double innerRadius, double outerRadius)
+        public Ring(Circle inner, Circle outer)
         {
-            InnerCircle.X = x;
-            OuterCircle.X = x;
-            InnerCircle.Y = y;
-            OuterCircle.Y = y;
-            InnerCircle.Radius = innerRadius;
-            OuterCircle.Radius = outerRadius;
+            if (inner.Center != outer.Center)
+                throw new Exception("Координаты центров не совпадают");
+            _innerCircle = inner;
+            _outerCircle = outer;
         }
         public double GetRingArea()
         {
-            _ringArea = Math.PI *
-                (OuterCircle.Radius * OuterCircle.Radius - InnerCircle.Radius * InnerCircle.Radius);
+           double ringArea = Math.PI *
+                (_outerCircle.Radius * _outerCircle.Radius - _innerCircle.Radius * _innerCircle.Radius);
 
-            return _ringArea;
+            return ringArea;
         }
 
         public double GetRingLength()
         {
-            _ringLength = OuterCircle.GetLength() + InnerCircle.GetLength();
+            double ringLength = _outerCircle.GetLength() + _innerCircle.GetLength();
 
-            return _ringLength;
+            return ringLength;
         }
     }
 }
