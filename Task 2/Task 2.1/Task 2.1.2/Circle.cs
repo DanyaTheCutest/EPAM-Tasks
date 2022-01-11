@@ -8,8 +8,7 @@ namespace Task_2._1._2
 {
     public class Circle
     {
-        private Point _x;
-        private Point _y;
+        private Point _center;       
         private double _radius;
         private const double _pi = Math.PI;
         
@@ -23,22 +22,13 @@ namespace Task_2._1._2
                     _radius = value;
             }
         }
-        public double X
-        {
-            get { return _x.CoordinateX; }
-            
-        }
-        public double Y
-        {
-            get { return _y.CoordinateY; }
-            
-        }
 
+        public double[] Center { get =>
+                new double[2] { _center.CoordinateX, _center.CoordinateY };}
 
-        public Circle(Point x, Point y, double r)
+        public Circle(Point center, double r)
         {
-            _x = x;
-            _y = y;
+            _center = center;
             Radius = r;
         }       
 
