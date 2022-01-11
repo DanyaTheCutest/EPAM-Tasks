@@ -16,17 +16,15 @@ namespace Task_2._1._2
             get => _coordinateX;
             private set
             {
-                if (value > 0)
-                    _coordinateX = value;
+                _coordinateX = value;
             }
         }
         public double CoordinateY
         {
             get => _coordinateY;
             private set
-            {
-                if (value >= 0)
-                    _coordinateY = value;
+            {               
+                 _coordinateY = value;
             }
         }
 
