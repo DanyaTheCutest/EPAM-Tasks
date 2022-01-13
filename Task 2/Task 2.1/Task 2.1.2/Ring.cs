@@ -30,8 +30,13 @@ namespace Task_2._1._2
         public double GetRingLength()
         {
             double ringLength = _outerCircle.GetLength() + _innerCircle.GetLength();
-
             return ringLength;
+        }
+        public override string ToString()
+        {
+            return $"Координаты центров: {_innerCircle.Center}\n" +
+                $"Сумма длин окружностей: {GetRingLength()}\n" +
+                $"Площадь кольца: {GetRingArea()}";
         }
     }
 }

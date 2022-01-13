@@ -18,8 +18,9 @@ namespace Task_2._1._2
             get { return _radius; }
             private set
             {
-                if (value > 0)
-                    _radius = value;
+                if (value <= 0)
+                    throw new Exception("Радиус не может быть меньше или равен 0");
+                _radius = value;
             }
         }
 
@@ -42,6 +43,11 @@ namespace Task_2._1._2
         {
             double roundLength = 2 * _pi * _radius;
             return roundLength;
+        }
+        public override string ToString()
+        {
+            return $"Координаты центра: {Center}\nДлина окружности: {GetLength()}\n" +
+                $"Радиус: {Radius}\nПлощадь: {GetArea()}";
         }
     }
 }
