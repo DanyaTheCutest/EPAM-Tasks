@@ -33,7 +33,10 @@ namespace Task_2._1._2
             CoordinateX = x;
             CoordinateY = y;
         }
-        
-        
+        public override string ToString()
+        {
+            return $"[{_coordinateX}; {_coordinateY}]";
+        }
+
     }
 }

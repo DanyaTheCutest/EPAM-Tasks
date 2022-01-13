@@ -15,13 +15,8 @@ namespace Task_2._1._2
 
         public Square(Line side)
         {
-            if (side.StartCoordinates[0] != side.EndCoordinates[0])
-                throw new Exception("Это не квадрат! У квадрата сторона должна быть прямой!");
-            else
-            {
-                _leftLine = side;
-                DrawSquare(side);
-            }
+            _leftLine = side;
+            DrawSquare(side);
         }
 
         private void DrawSquare(Line side)
@@ -33,8 +28,7 @@ namespace Task_2._1._2
                 new Point(side.StartCoordinates[0] + side.Length, side.StartCoordinates[1]));
 
              _rightLine = new Line(new Point(_leftLine.StartCoordinates[0] + side.Length, side.StartCoordinates[1]),
-                new Point(side.StartCoordinates[0] + side.Length, side.EndCoordinates[1]));
-                        
+                new Point(side.StartCoordinates[0] + side.Length, side.EndCoordinates[1]));                      
         }
 
         public double GetArea()
@@ -49,5 +43,12 @@ namespace Task_2._1._2
             return perimeter;
         }
 
+        
+
+        public override string ToString()
+        {
+            return $"Координаты углов: {_leftLine},{_rightLine}\n" +
+                $"Площадь: {GetArea()}\nПериметр: {GetPerimeter()}";
+        }
     }
 }

@@ -6,42 +6,60 @@ using System.Threading.Tasks;
 
 namespace Task_2._1._2
 {
-    public class Rectangle 
+    public class Rectangle : Square
     {
-        private Square _sideA;
-        private Square _sideB;
+        private Line _sideA;
+        private Line _sideB;
+        private Line _bottomSide;
+        private Line _rightSide;
 
-        public Rectangle()
+        public Rectangle(Line sideA, Line sideB) : base(sideA)
         {
-
+            if (sideA.EndCoordinates != sideB.StartCoordinates)
+                throw new Exception("Линии не соприкасаются");
+            SideA = sideA;
+            SideB = sideB;
         }
 
-        public Rectangle(int sideA, int sideB)
+        public Line SideA
         {
-
+            get => _sideA;
+            private set
+            {
+                _sideA = value;
+            }
+        }
+        public Line SideB
+        {
+            get => _sideB;
+            private set
+            {
+                _sideB = value;
+            }
         }
 
-        //public int SideA
-        //{
-        //    get => _sideA.Side;
-        //    set
-        //    {
-        //        if (value > 0)
-        //            _sideA.Side = value;
-        //    }
-        //}
+        public new double GetArea()
+        {
+            return _sideA.Length * _sideB.Length;
+        }
 
-        //public int SideB
-        //{
-        //    get => _sideB.Side;
-        //    set
-        //    {
-        //        if (value > 0)
-        //            _sideB.Side = value;
-        //    }
-        //}
+        public new double GetPerimeter()
+        {
+            return 2 * (_sideA.Length + _sideB.Length);
+        }
 
+        private void DrawRectangle(Line sideA, Line sideB)
+        {
+            _bottomSide = new Line(new Point(sideA.StartCoordinates[0],
+                sideA.StartCoordinates[1]), new Point(sideB.EndCoordinates[0], sideA.StartCoordinates[1]));
+            _rightSide = new Line(new Point(sideA.StartCoordinates[0],
+                sideA.StartCoordinates[1]), new Point(sideB.EndCoordinates[0], sideA.StartCoordinates[1]));
+        }
 
-
+        public override string ToString()
+        {
+            return $"Координаты углов: {_sideA},{_rightSide}\n" +
+                $"Площадь: {GetArea()}\nПериметр: {GetPerimeter()}";
+        }
     }
 }
