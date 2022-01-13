@@ -6,27 +6,10 @@ using System.Threading.Tasks;
 
 namespace Task_2._1._2
 {
-    public class Point
+    public class Point : Figure
     {
-        private double _coordinateX;
-        private double _coordinateY;
-
-        public double CoordinateX
-        {
-            get => _coordinateX;
-            private set
-            {
-                _coordinateX = value;
-            }
-        }
-        public double CoordinateY
-        {
-            get => _coordinateY;
-            private set
-            {               
-                 _coordinateY = value;
-            }
-        }
+        public double CoordinateX { get; private set; } 
+        public double CoordinateY { get; private set; }       
 
         public Point(double x, double y)
         {
@@ -35,8 +18,7 @@ namespace Task_2._1._2
         }
         public override string ToString()
         {
-            return $"[{_coordinateX}; {_coordinateY}]";
+            return $"[{CoordinateX}; {CoordinateY}]";
         }
-
     }
 }

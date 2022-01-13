@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task_2._1._2
 {
-    public class Ring 
+    public class Ring : Figure
     {
         private Circle _innerCircle;
         private Circle _outerCircle;
@@ -14,18 +14,14 @@ namespace Task_2._1._2
 
         public Ring(Circle inner, Circle outer)
         {
-            if (inner.Center != outer.Center)
+            if (inner.Center.CoordinateX != outer.Center.CoordinateX)
                 throw new Exception("Координаты центров не совпадают");
             _innerCircle = inner;
             _outerCircle = outer;
         }
-        public double GetRingArea()
-        {
-           double ringArea = Math.PI *
+        public double GetRingArea() => Math.PI *
                 (_outerCircle.Radius * _outerCircle.Radius - _innerCircle.Radius * _innerCircle.Radius);
-
-            return ringArea;
-        }
+        
 
         public double GetRingLength()
         {

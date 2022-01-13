@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task_2._1._2
 {
-    public class Line 
+    public class Line : Figure
     {
         private Point _startPoint;
         private Point _endPoint;
@@ -43,12 +43,12 @@ namespace Task_2._1._2
         }
         public override string ToString()
         {
-            return "{" + _startPoint + "," + _endPoint + "}";             
+            return $"{{{_startPoint}}},{{{_endPoint}}}";             
         }
         private void ValidateSide(Point start, Point end)
         {
             if (start == end)
-                throw new Exception("Это не линия");           
+                throw new Exception("Координаты начала и конца линии не могут быть равны");           
         }
     }
 }
