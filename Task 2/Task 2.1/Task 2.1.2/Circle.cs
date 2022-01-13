@@ -23,7 +23,6 @@ namespace Task_2._1._2
        
         public double GetArea() => 2 * Math.PI * (Radius * Radius);
         
-
         public double GetLength() => 2 * Math.PI * Radius;
         
         public override string ToString()
