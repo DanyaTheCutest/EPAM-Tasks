@@ -6,49 +6,33 @@ using System.Threading.Tasks;
 
 namespace Task_2._1._2
 {
-    public class Square : Figure
+    public class Square : CornerFigure
     {
-        private Line _leftLine;
-        private Line _topLine;
-        private Line _bottomLine;
-        private Line _rightLine;
+        public Point A { get; }
+        public Point B { get; }
+        public Point C { get; }
+        public Point D { get; }
 
-        public Square(Line side)
+        public Line Length { get; }
+        public Square(Point a, Point b, Point c, Point d)
         {
-            _leftLine = side;
-            DrawSquare(side);
+            A = a;
+            B = b;
+            C = c;
+            D = d;
+            if (new Line(A, B).Length != new Line(C, D).Length)
+                throw new Exception("Длины сторон неравны");
+            Length = new Line(A, B);
         }
-
-        private void DrawSquare(Line side)
-        {
-             _topLine = new Line(new Point(side.EndCoordinates[0], side.EndCoordinates[1]),
-                new Point(side.StartCoordinates[0] + side.Length, side.EndCoordinates[1]));
-
-             _bottomLine = new Line(new Point(_leftLine.StartCoordinates[0], side.StartCoordinates[1]),
-                new Point(side.StartCoordinates[0] + side.Length, side.StartCoordinates[1]));
-
-             _rightLine = new Line(new Point(_leftLine.StartCoordinates[0] + side.Length, side.StartCoordinates[1]),
-                new Point(side.StartCoordinates[0] + side.Length, side.EndCoordinates[1]));                      
-        }
-
-        public double GetArea()
-        {
-            double area = _leftLine.Length * _leftLine.Length;
-            return area;
-        }
-
-        public double GetPerimeter()
-        {
-            double perimeter = _leftLine.Length * 4;
-            return perimeter;
-        }
-
+       
+        public override double GetArea() => Length.Length * Length.Length;
         
-
+        public override double GetPerimeter() => Length.Length * 4;
+             
         public override string ToString()
         {
-            return $"Координаты углов: {_leftLine},{_rightLine}\n" +
-                $"Площадь: {GetArea()}\nПериметр: {GetPerimeter()}";
+            return $"Координаты углов: {A},{B},{C},{D}\n" +
+                base.ToString();
         }
     }
 }

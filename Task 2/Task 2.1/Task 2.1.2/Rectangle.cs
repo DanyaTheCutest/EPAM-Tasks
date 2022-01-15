@@ -8,58 +8,29 @@ namespace Task_2._1._2
 {
     public class Rectangle : Square
     {
-        private Line _sideA;
-        private Line _sideB;
-        private Line _bottomSide;
-        private Line _rightSide;
-
-        public Rectangle(Line sideA, Line sideB) : base(sideA)
+        public Point A { get; }
+        public Point B { get; }
+        public Point C { get; }
+        public Point D { get; }
+        public Line Length { get; }
+        public Line Width { get; }
+        public Rectangle(Point a, Point b, Point c, Point d) : base(a,b,c,d)
         {
-            if (sideA.EndCoordinates != sideB.StartCoordinates)
-                throw new Exception("Линии не соприкасаются");
-            SideA = sideA;
-            SideB = sideB;
+            A = a;
+            B = b;
+            C = c;
+            D = d;
+            if (new Line(a, b).Length != new Line(c, d).Length || new Line(b,c).Length != new Line(a,d).Length)
+                throw new Exception("Длины противоположных сторон неравны");
+            Length = new Line(a, d);
+            Width = new Line(a, b);
         }
 
-        public Line SideA
-        {
-            get => _sideA;
-            private set
-            {
-                _sideA = value;
-            }
-        }
-        public Line SideB
-        {
-            get => _sideB;
-            private set
-            {
-                _sideB = value;
-            }
-        }
+        public override double GetArea() => Width.Length * Length.Length;
 
-        public new double GetArea()
-        {
-            return _sideA.Length * _sideB.Length;
-        }
+        public new double GetPerimeter() => 2 * (Length.Length + Width.Length);
 
-        public new double GetPerimeter()
-        {
-            return 2 * (_sideA.Length + _sideB.Length);
-        }
-
-        private void DrawRectangle(Line sideA, Line sideB)
-        {
-            _bottomSide = new Line(new Point(sideA.StartCoordinates[0],
-                sideA.StartCoordinates[1]), new Point(sideB.EndCoordinates[0], sideA.StartCoordinates[1]));
-            _rightSide = new Line(new Point(sideA.StartCoordinates[0],
-                sideA.StartCoordinates[1]), new Point(sideB.EndCoordinates[0], sideA.StartCoordinates[1]));
-        }
-
-        public override string ToString()
-        {
-            return $"Координаты углов: {_sideA},{_rightSide}\n" +
-                $"Площадь: {GetArea()}\nПериметр: {GetPerimeter()}";
-        }
+        public override string ToString() => base.ToString();
+        
     }
 }

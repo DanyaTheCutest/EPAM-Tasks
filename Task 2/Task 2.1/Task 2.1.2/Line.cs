@@ -12,8 +12,6 @@ namespace Task_2._1._2
         private Point _endPoint;
         private double _length;
 
-        
-        
         public Line(Point start, Point end) 
         {
             ValidateSide(start, end);
@@ -47,7 +45,7 @@ namespace Task_2._1._2
         }
         private void ValidateSide(Point start, Point end)
         {
-            if (start == end)
+            if (start.CoordinateX == end.CoordinateX && start.CoordinateY == end.CoordinateY)
                 throw new Exception("Координаты начала и конца линии не могут быть равны");           
         }
     }
