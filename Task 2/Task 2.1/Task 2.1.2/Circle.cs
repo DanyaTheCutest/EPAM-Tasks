@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task_2._1._2
 {
-    public class Circle : Figure
+    public class Circle : CornerFigure
     {
         public Point Center { get; }
         public double Radius { get; }
@@ -21,14 +21,14 @@ namespace Task_2._1._2
 
         public Circle(double x, double y, double r) : this(new Point(x, y), r){ }
        
-        public double GetArea() => 2 * Math.PI * (Radius * Radius);
+        public override double GetArea() => 2 * Math.PI * (Radius * Radius);
         
-        public double GetLength() => 2 * Math.PI * Radius;
+        public override double GetPerimeter() => 2 * Math.PI * Radius;
        
         public override string ToString()
         {
             return string.Join(Environment.NewLine, "Круг: ", $"Координаты центра {Center}",
-                $"Длина окружности: {GetLength()}",
+                $"Длина окружности: {GetPerimeter()}",
                 $"Радиус {Radius}", $"Площадь: {GetArea()}");
         }
     }

@@ -8,31 +8,34 @@ namespace Task_2._1._2
 {
     public class Rectangle : Square
     {
-        //public Point A { get; }
-        //public Point B { get; }
-        //public Point C { get; }
-        //public Point D { get; }
-        //public Line Length { get; }
-        public Line Width { get; }
+        public double Width {get;}
         public Rectangle(Point a, Point b, Point c, Point d) : base(a,b,c,d)
         {
             A = a;
             B = b;
             C = c;
             D = d;
-            var firstLine = new Line(a, d);
-            var secondLine = new Line(a, b);
-            if (secondLine.Length != new Line(c, d).Length || new Line(b,c).Length != firstLine.Length)
+            var length = new Line(a, d);
+            var width = new Line(a, b);
+            if (!Validate(length,width))
                 throw new Exception("Длины противоположных сторон неравны");
-            Length = firstLine;
-            Width = secondLine;
+            Length = length.Length;
+            Width = width.Length;
+        }
+        private bool Validate(Line length, Line width)
+        {
+            var lineC = new Line(C, D);
+            var lineD = new Line(A, D);
+            if (width.Length != lineC.Length || length.Length != lineD.Length)
+                return false;
+            return true;            
         }
 
-        public override double GetArea() => Width.Length * Length.Length;
+        public override double GetArea() => Width * Length;
 
-        public override double GetPerimeter() => 2 * (Length.Length + Width.Length);
+        public override double GetPerimeter() => 2 * (Length + Width);
 
-        public override string ToString() => base.ToString();
+        public override string ToString() => string.Join(Environment.NewLine,"Прямоугольник: ", base.ToString());
         
     }
 }
