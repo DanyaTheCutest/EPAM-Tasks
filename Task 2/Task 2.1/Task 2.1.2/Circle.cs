@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task_2._1._2
 {
-    public class Circle : CornerFigure
+    public class Circle : IAreable
     {
         public Point Center { get; }
         public double Radius { get; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task_2._1._2
 {
-    public class Ring : CornerFigure
+    public class Ring : IAreable
     {
         private Circle _innerCircle;
         private Circle _outerCircle;

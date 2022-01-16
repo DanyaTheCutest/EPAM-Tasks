@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task_2._1._2
 {
-    public class Square : CornerFigure
+    public class Square : IAreable
     {
         public Point A { get; protected set; }
         public Point B { get; protected set; }

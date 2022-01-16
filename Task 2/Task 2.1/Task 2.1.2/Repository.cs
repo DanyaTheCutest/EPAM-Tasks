@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task_2._1._2
 {
-    class Repository
+    public class Repository
     {
-        private List<Figure> figures = new List<Figure>();
+        protected List<Figure> figures = new List<Figure>();
 
         public void AddFigure(Figure figure) => figures.Add(figure);       
         public string GetAll() => figures.ToString();        
