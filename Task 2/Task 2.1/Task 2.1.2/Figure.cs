@@ -8,5 +8,6 @@ namespace Task_2._1._2
 {
     public abstract class Figure
     {
+        
     }
 }

@@ -13,25 +13,26 @@ namespace Task_2._1._2
         public Point C { get; }
         public Point D { get; }
 
-        public Line Length { get; }
+        public double Length { get; }
         public Square(Point a, Point b, Point c, Point d)
         {
             A = a;
             B = b;
             C = c;
             D = d;
-            if (new Line(A, B).Length != new Line(C, D).Length)
+            var line = new Line(a, b);
+            if (line.Length != new Line(C, D).Length)
                 throw new Exception("Длины сторон неравны");
-            Length = new Line(A, B);
+            Length = line.Length;
         }
        
-        public override double GetArea() => Length.Length * Length.Length;
+        public override double GetArea() => Length * Length;
         
-        public override double GetPerimeter() => Length.Length * 4;
+        public override double GetPerimeter() => Length * 4;
              
         public override string ToString()
         {
-            return $"Координаты углов: {A},{B},{C},{D}\n" +
+            return $"Координаты углов: {A},{B},{C},{D}{Environment.NewLine}" +
                 base.ToString();
         }
     }

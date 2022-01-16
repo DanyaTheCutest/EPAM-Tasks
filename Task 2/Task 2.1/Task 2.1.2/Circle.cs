@@ -24,11 +24,12 @@ namespace Task_2._1._2
         public double GetArea() => 2 * Math.PI * (Radius * Radius);
         
         public double GetLength() => 2 * Math.PI * Radius;
-        
+       
         public override string ToString()
         {
-            return $"Круг:\nКоординаты центра: {Center}\nДлина окружности: {GetLength()}\n" +
-                $"Радиус: {Radius}\nПлощадь: {GetArea()}";
+            return string.Join(Environment.NewLine, "Круг: ", $"Координаты центра {Center}",
+                $"Длина окружности: {GetLength()}",
+                $"Радиус {Radius}", $"Площадь: {GetArea()}");
         }
     }
 }
