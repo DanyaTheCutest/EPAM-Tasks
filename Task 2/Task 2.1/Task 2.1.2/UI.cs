@@ -15,28 +15,34 @@ namespace Task_2._1._2
         }
         public void Greet()
         {
-            Console.WriteLine("Выберите действие:");
-            Console.WriteLine("1: Добавить фигуру");
-            Console.WriteLine("2: Вывести фигуры");
-            Console.WriteLine("3: Очистить холст");
-            Console.WriteLine("4: Выход");
+            while (true)
+            {
+                Console.WriteLine("Выберите действие:");
+                Console.WriteLine("1: Добавить фигуру");
+                Console.WriteLine("2: Вывести фигуры");
+                Console.WriteLine("3: Очистить холст");
+                Console.WriteLine("4: Выход");
+                var input = ReadIntInput();
+
+                if (input == 4)
+                    break;
+                HandleInput(input);
+            }
         }
         public void HandleInput(int input)
         {
             switch (input)
             {
-                case 1:
+                case 1: 
+                    Add();
                     break;
                 case 2:
-                    base.GetAll();
+                    GetAll();
                     break;
                 case 3:
-                    base.Clear();
-                    break;
-                case 4:
-                    break;
-            }
-                
+                    Clear();
+                    break;               
+            }              
         }
         private void Add()
         {
@@ -46,12 +52,34 @@ namespace Task_2._1._2
             Console.WriteLine("3: Квадрат");
             Console.WriteLine("4: Прямоугольник");
             Console.WriteLine("5: Кольцо");
-            int input = ReadIntInput();
+            Console.WriteLine("6: Вернуться назад");
+            CreateFigure(ReadIntInput());
         }
-        
-        private void AddFigureInput()
+        private new void GetAll()
         {
-
+            foreach (var item in figures)
+            {
+                Console.WriteLine(item);
+            }
+        }
+        private void CreateFigure(int input)
+        {
+            switch (input)
+            {
+                case 1: CreateCircle();
+                    break;
+                case 2: CreateTriangle();
+                    break;
+                case 3: CreateSquare();
+                    break;
+                case 4: CreateRectangle();
+                    break;
+                case 5: CreateRing();
+                    break;
+                case 6: 
+                    break;
+                
+            }
         }
         
         private void CreateCircle()
@@ -145,7 +173,13 @@ namespace Task_2._1._2
         }
         private int ReadIntInput()
         {
-            throw new NotImplementedException;
+            string input;
+            int res;
+            do
+            {
+                input = Console.ReadLine();
+            } while (!int.TryParse(input, out res));
+            return res;
         }
     }
 }
