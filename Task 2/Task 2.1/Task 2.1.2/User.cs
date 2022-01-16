@@ -15,10 +15,7 @@ namespace Task_2._1._2
         {
             Name = name;
         }
-        public override string ToString()
-        {
-            return Name;
-        }
+        
         
     }
 }

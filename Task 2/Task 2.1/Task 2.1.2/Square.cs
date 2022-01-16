@@ -42,7 +42,7 @@ namespace Task_2._1._2
              
         public override string ToString()
         {
-            return $"Координаты углов: {A},{B},{C},{D}{Environment.NewLine}" +
+            return $"Квадрат: {Environment.NewLine}Координаты углов: {A},{B},{C},{D}{Environment.NewLine}" +
                 base.ToString();
         }
     }

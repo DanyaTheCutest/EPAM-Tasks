@@ -11,21 +11,24 @@ namespace Task_2._1._2
         public Point A { get; }
         public Point B { get; }
         public Point C { get; }
-        private double _lineA;
-        private double _lineB;
-        private double _lineC;
+        public double _lineA { get; }
+        public double _lineB { get; }
+        public double _lineC { get; }
         public Triangle(Point a, Point b, Point c)
         {
+            A = a;
+            B = b;
+            C = c;
             _lineA = new Line(a, b).Length;
             _lineB = new Line(b, c).Length;
             _lineC = new Line(c, a).Length;
         }
-        public override double GetPerimeter() => new Line(A, B).Length 
-            + new Line(B, C).Length + new Line(C, A).Length;
+        public override double GetPerimeter() => _lineA
+            + _lineB + _lineC;
 
         public override double GetArea()
         {
-            var p = GetPerimeter() / 2;
+            var p = GetPerimeter() / 2;           
             return Math.Sqrt(p * (p - _lineA) * (p - _lineB) * (p - _lineC)); 
         }
         public override string ToString()
