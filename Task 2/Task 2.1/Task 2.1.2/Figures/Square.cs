@@ -19,17 +19,18 @@ namespace Task_2._1._2.Figures
             A = a;
             B = b;
             C = c;
-            D = d;      
+            D = d;
+            Validate();
         }
         
-        protected virtual void SetSides()
+        protected virtual void Validate()
         {
-            Length = new Line(a, b).Length;
-            var lineB = new Line(B, C);
-            var lineC = new Line(C, D);
-            var lineD = new Line(A, D);
-            if (line.Length != lineB.Length || line.Length != lineC.Length || line.Length != lineD.Length)
-               
+            Length = new Line(A, B).Length;
+            var lineB = new Line(B, C).Length;
+            var lineC = new Line(C, D).Length;
+            var lineD = new Line(A, D).Length;
+            if (Length != lineB || Length != lineC || Length != lineD)
+                throw new Exception("Стороны неравны");                         
         }
 
         public override double GetArea() => Length * Length;
@@ -38,8 +39,8 @@ namespace Task_2._1._2.Figures
              
         public override string ToString()
         {
-            return $"Квадрат: {Environment.NewLine}Координаты углов: {A},{B},{C},{D}{Environment.NewLine}" +
-                base.ToString();
+            return string.Join(Environment.NewLine,$"Квадрат:" + "Координаты углов: {A},{B},{C},{D}" +
+                base.ToString());
         }
     }
 }
