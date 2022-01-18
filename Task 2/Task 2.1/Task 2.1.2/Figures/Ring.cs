@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task_2._1._2
+namespace Task_2._1._2.Figures
 {
-    public class Ring : IAreable
+    public class Ring : FigureWithArea
     {
         private Circle _innerCircle;
         private Circle _outerCircle;

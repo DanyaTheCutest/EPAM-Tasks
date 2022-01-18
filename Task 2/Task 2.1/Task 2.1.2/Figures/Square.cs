@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task_2._1._2
+namespace Task_2._1._2.Figures
 {
-    public class Square : IAreable
+    public class Square : FigureWithArea
     {
         public Point A { get; protected set; }
         public Point B { get; protected set; }
@@ -19,21 +19,17 @@ namespace Task_2._1._2
             A = a;
             B = b;
             C = c;
-            D = d;
-            var line = new Line(a, b); 
-            if (!Validate(line))
-                throw new Exception("Длины сторон неравны");
-            Length = line.Length;
+            D = d;      
         }
         
-        private bool Validate(Line line)
-        {           
+        protected virtual void SetSides()
+        {
+            Length = new Line(a, b).Length;
             var lineB = new Line(B, C);
             var lineC = new Line(C, D);
             var lineD = new Line(A, D);
             if (line.Length != lineB.Length || line.Length != lineC.Length || line.Length != lineD.Length)
-                return false;
-            return true;
+               
         }
 
         public override double GetArea() => Length * Length;

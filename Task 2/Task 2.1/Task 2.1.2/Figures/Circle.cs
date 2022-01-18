@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task_2._1._2
+namespace Task_2._1._2.Figures
 {
-    public class Circle : IAreable
+    public class Circle : FigureWithArea
     {
         public Point Center { get; }
         public double Radius { get; }

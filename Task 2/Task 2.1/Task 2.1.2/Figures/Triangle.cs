@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task_2._1._2
+namespace Task_2._1._2.Figures
 {
-    class Triangle : IAreable
+    class Triangle : FigureWithArea
     {
         public Point A { get; }
         public Point B { get; }
