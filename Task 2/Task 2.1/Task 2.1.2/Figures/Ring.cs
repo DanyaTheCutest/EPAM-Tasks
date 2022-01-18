@@ -30,9 +30,9 @@ namespace Task_2._1._2.Figures
         }
         public override string ToString()
         {
-            return $"Координаты центров: {_innerCircle.Center}\n" +
-                $"Сумма длин окружностей: {GetPerimeter()}\n" +
-                $"Площадь кольца: {GetArea()}";
+            return string.Join(Environment.NewLine, $"Координаты центров: {_innerCircle.Center}" +
+                $"Сумма длин окружностей: {GetPerimeter()}" +
+                $"Площадь кольца: {GetArea()}");
         }
     }
 }
