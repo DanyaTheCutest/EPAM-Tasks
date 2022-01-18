@@ -39,8 +39,8 @@ namespace Task_2._1._2.Figures
              
         public override string ToString()
         {
-            return string.Join(Environment.NewLine, $"Квадрат:" + $"Координаты углов: {A},{B},{C},{D}"
-                + Environment.NewLine + base.ToString());              
+            return string.Join(Environment.NewLine, $"Квадрат:", $"Координаты углов: {A},{B},{C},{D}",
+                 base.ToString());              
         }
     }
 }

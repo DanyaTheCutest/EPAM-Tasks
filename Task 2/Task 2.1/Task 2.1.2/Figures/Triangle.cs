@@ -33,7 +33,7 @@ namespace Task_2._1._2.Figures
         }
         public override string ToString()
         {
-            return string.Join(Environment.NewLine, "Треугольник: ", $"Координаты углов: {A}{B}{C}", base.ToString());
+            return string.Join(Environment.NewLine, "Треугольник: ", $"Координаты вершин: {A}{B}{C}", base.ToString());
         }
     }
 }

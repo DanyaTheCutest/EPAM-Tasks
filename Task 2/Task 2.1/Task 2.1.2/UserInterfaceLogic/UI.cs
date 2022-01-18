@@ -38,7 +38,7 @@ namespace Task_2._1._2.UserInterfaceLogic
                     Add();
                     break;
                 case 2:
-                    GetAll();
+                    Print();
                     break;
                 case 3:
                     Clear();
@@ -56,12 +56,10 @@ namespace Task_2._1._2.UserInterfaceLogic
             Console.WriteLine("6: Вернуться назад");
             CreateFigure(ReadIntInput());
         }
-        private new void GetAll()
+        private void Print()
         {
-            foreach (var item in figures)
-            {
+            foreach (var item in GetAll())
                 Console.WriteLine(item);
-            }
         }
         private void CreateFigure(int input)
         {
@@ -85,20 +83,16 @@ namespace Task_2._1._2.UserInterfaceLogic
         
         private void CreateCircle()
         {
-            Console.WriteLine("Введите координату центра х: ");
-            double x = ReadDoubleInput();
-            Console.WriteLine("Введите координату центра y: ");
-            double y = ReadDoubleInput();
-            Console.WriteLine("Введите радиус: ");
+            double x = inputCenter('x');
+            double y = inputCenter('y');
+            Console.Write("Введите радиус: ");
             double r = ReadDoubleInput();
             figures.Add(new Circle(x,y,r));
         }
         private void CreateRing()
         {
-            Console.Write("Введите координату центра x: ");
-            double x = ReadDoubleInput();
-            Console.Write("Введите координату центра y: ");
-            double y = ReadDoubleInput();
+            double x = inputCenter('x');
+            double y = inputCenter('y');
             Console.Write("Введите внешний радиус кольца: ");
             double outer = ReadDoubleInput();
             Console.Write("Введите внутренний радиус: ");
@@ -107,61 +101,52 @@ namespace Task_2._1._2.UserInterfaceLogic
         }
         private void CreateSquare()
         {
-            Console.Write("Введите координаты угла A: \nx: ");
-            double xA = ReadDoubleInput();
-            Console.Write("y: ");
-            double yA = ReadDoubleInput();
-            Console.Write("Введите координаты угла B: \nx: ");
-            double xB = ReadDoubleInput();
-            Console.Write("y: ");
-            double yB = ReadDoubleInput();
-            Console.Write("Введите координаты угла C: \nx: ");
-            double xC = ReadDoubleInput();
-            Console.Write("y: ");
-            double yC = ReadDoubleInput();
-            Console.Write("Введите координаты угла D: \nx: ");
-            double xD = ReadDoubleInput();
-            Console.Write("y: ");
-            double yD = ReadDoubleInput();
+            double xA = inputCorner('A', 'x');            
+            double yA = inputCorner('A', 'y');
+            double xB = inputCorner('B', 'x');
+            double yB = inputCorner('B', 'y');
+            double xC = inputCorner('C', 'x');
+            double yC = inputCorner('C', 'y');
+            double xD = inputCorner('D', 'x');
+            double yD = inputCorner('D', 'y');
             figures.Add(new Square(new Point(xA, yA), new Point(xB, yB), new Point(xC, yC), new Point(xD, yD)));
         }
         private void CreateRectangle()
         {
-            Console.Write("Введите координаты угла A: \nx: ");
-            double xA = ReadDoubleInput();
-            Console.Write("y: ");
-            double yA = ReadDoubleInput();
-            Console.Write("Введите координаты угла B: \nx: ");
-            double xB = ReadDoubleInput();
-            Console.Write("y: ");
-            double yB = ReadDoubleInput();
-            Console.Write("Введите координаты угла C: \nx: ");
-            double xC = ReadDoubleInput();
-            Console.Write("y: ");
-            double yC = ReadDoubleInput();
-            Console.Write("Введите координаты угла D: \nx: ");
-            double xD = ReadDoubleInput();
-            Console.Write("y: ");
-            double yD = ReadDoubleInput();
+            double xA = inputCorner('A', 'x');
+            double yA = inputCorner('A', 'y');
+            double xB = inputCorner('B', 'x');
+            double yB = inputCorner('B', 'y');
+            double xC = inputCorner('C', 'x');
+            double yC = inputCorner('C', 'y');
+            double xD = inputCorner('D', 'x');
+            double yD = inputCorner('D', 'y');
             figures.Add(new Rectangle(new Point(xA, yA), new Point(xB, yB), new Point(xC, yC), new Point(xD, yD)));
         }
         private void CreateTriangle()
         {
-            Console.Write("Введите координаты угла A: \nx: ");
-            double xA = ReadDoubleInput();
-            Console.Write("y: ");
-            double yA = ReadDoubleInput();
-            Console.Write("Введите координаты угла B: \nx: ");
-            double xB = ReadDoubleInput();
-            Console.Write("y: ");
-            double yB = ReadDoubleInput();
-            Console.Write("Введите координаты угла C: \nx: ");
-            double xC = ReadDoubleInput();
-            Console.Write("y: ");
-            double yC = ReadDoubleInput();
+            double xA = inputCorner('A', 'x');
+            double yA = inputCorner('A', 'y');
+            double xB = inputCorner('B', 'x');
+            double yB = inputCorner('B', 'y');
+            double xC = inputCorner('C', 'x');
+            double yC = inputCorner('C', 'y');           
             figures.Add(new Triangle(new Point(xA, yA), new Point(xB, yB), new Point(xC, yC)));
         }
-
+        private double inputCenter(char c)
+        {
+            Console.Write($"Введите координату центра {c}: ");           
+            var res = ReadDoubleInput();
+            Console.WriteLine();
+            return res;
+        }
+        private double inputCorner(char C, char c)
+        {
+            Console.Write($"Введите координаты угла {C}:\n {c}:");
+            var res = ReadDoubleInput();
+            Console.WriteLine();
+            return res;
+        }
         private double ReadDoubleInput()
         {
             string input;
