@@ -28,7 +28,7 @@ namespace Task_2._1._2.Figures
 
         public override double GetPerimeter() => 2 * (Length + Width);
 
-        public override string ToString() => string.Join(Environment.NewLine,"Прямоугольник: ", base.ToString().Remove(0,11));
+        public override string ToString() => string.Join(Environment.NewLine,"Прямоугольник: ", base.ToString().Remove(0,8));
         
     }
 }
