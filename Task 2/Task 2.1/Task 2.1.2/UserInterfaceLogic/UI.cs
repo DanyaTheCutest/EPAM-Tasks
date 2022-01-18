@@ -87,7 +87,14 @@ namespace Task_2._1._2.UserInterfaceLogic
             double y = inputCenter('y');
             Console.Write("Введите радиус: ");
             double r = ReadDoubleInput();
-            figures.Add(new Circle(x,y,r));
+            try
+            {
+                figures.Add(new Circle(x, y, r));
+            }
+            catch
+            {
+                Console.WriteLine("Радиус не может быть меньше или равен 0");
+            }            
         }
         private void CreateRing()
         {
@@ -97,7 +104,14 @@ namespace Task_2._1._2.UserInterfaceLogic
             double outer = ReadDoubleInput();
             Console.Write("Введите внутренний радиус: ");
             double inner = ReadDoubleInput();
-            figures.Add(new Ring(new Circle(x,y,inner), new Circle(x,y,outer)));
+            try
+            {
+                figures.Add(new Ring(new Circle(x, y, inner), new Circle(x, y, outer)));
+            }
+            catch
+            {
+                Console.WriteLine("Внутренний радиус больше внешнего"); 
+            }           
         }
         private void CreateSquare()
         {
@@ -109,7 +123,15 @@ namespace Task_2._1._2.UserInterfaceLogic
             double yC = inputCorner('C', 'y');
             double xD = inputCorner('D', 'x');
             double yD = inputCorner('D', 'y');
-            figures.Add(new Square(new Point(xA, yA), new Point(xB, yB), new Point(xC, yC), new Point(xD, yD)));
+            try
+            {
+                figures.Add(new Square(new Point(xA, yA), new Point(xB, yB), new Point(xC, yC), new Point(xD, yD)));
+            }
+            catch
+            {
+                Console.WriteLine("Длины сторон неравны");
+            }
+            
         }
         private void CreateRectangle()
         {
@@ -121,7 +143,14 @@ namespace Task_2._1._2.UserInterfaceLogic
             double yC = inputCorner('C', 'y');
             double xD = inputCorner('D', 'x');
             double yD = inputCorner('D', 'y');
-            figures.Add(new Rectangle(new Point(xA, yA), new Point(xB, yB), new Point(xC, yC), new Point(xD, yD)));
+            try 
+            {
+                figures.Add(new Rectangle(new Point(xA, yA), new Point(xB, yB), new Point(xC, yC), new Point(xD, yD)));
+            }
+            catch
+            {
+                Console.WriteLine("Длины противоположных сторон неравны");
+            }           
         }
         private void CreateTriangle()
         {

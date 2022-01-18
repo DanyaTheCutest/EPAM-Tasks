@@ -14,8 +14,8 @@ namespace Task_2._1._2.Figures
 
         public Ring(Circle inner, Circle outer)
         {
-            if (inner.Center.CoordinateX != outer.Center.CoordinateX)
-                throw new Exception("Координаты центров не совпадают");
+            if (inner.Radius > outer.Radius)
+                throw new Exception("Внутренний радиус больше внешнего");
             _innerCircle = inner;
             _outerCircle = outer;
         }
