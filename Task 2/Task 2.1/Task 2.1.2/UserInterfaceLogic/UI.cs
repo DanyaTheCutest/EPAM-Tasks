@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Task_2._1._2.Figures;
+using Task_2._1._2.Exceptions;
 
 namespace Task_2._1._2.UserInterfaceLogic
 {
@@ -94,6 +95,7 @@ namespace Task_2._1._2.UserInterfaceLogic
             catch
             {
                 Console.WriteLine("Радиус не может быть меньше или равен 0");
+                Console.WriteLine("Фигура не была создана");
             }            
         }
         private void CreateRing()
@@ -110,7 +112,8 @@ namespace Task_2._1._2.UserInterfaceLogic
             }
             catch
             {
-                Console.WriteLine("Внутренний радиус больше внешнего"); 
+                Console.WriteLine("Внутренний радиус больше внешнего");
+                Console.WriteLine("Фигура не была создана");
             }           
         }
         private void CreateSquare()
@@ -127,11 +130,16 @@ namespace Task_2._1._2.UserInterfaceLogic
             {
                 figures.Add(new Square(new Point(xA, yA), new Point(xB, yB), new Point(xC, yC), new Point(xD, yD)));
             }
-            catch
+            catch (CornerException ex)
             {
-                Console.WriteLine("Длины сторон неравны");
+                Console.WriteLine(ex.Message);
             }
-            
+            catch (LineException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Фигура не была создана");
+            }
+
         }
         private void CreateRectangle()
         {
@@ -147,10 +155,16 @@ namespace Task_2._1._2.UserInterfaceLogic
             {
                 figures.Add(new Rectangle(new Point(xA, yA), new Point(xB, yB), new Point(xC, yC), new Point(xD, yD)));
             }
-            catch
+            catch (CornerException ex)
             {
-                Console.WriteLine("Длины противоположных сторон неравны");
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Фигура не была создана");
             }           
+            catch (LineException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Фигура не была создана");
+            }
         }
         private void CreateTriangle()
         {

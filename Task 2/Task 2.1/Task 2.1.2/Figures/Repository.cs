@@ -11,11 +11,8 @@ namespace Task_2._1._2.Figures
         protected List<Figure> figures = new List<Figure>();
 
         public void AddFigure(Figure figure) => figures.Add(figure);
-        public IReadOnlyList<Figure> GetAll() 
-        {
-            IReadOnlyList<Figure> list = figures;
-            return list;
-        }
+        public List<Figure> GetAll() => new List<Figure>(figures);
+        
         
         public void Clear() => figures.Clear();
 

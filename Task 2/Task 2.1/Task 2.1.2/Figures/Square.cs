@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Task_2._1._2.Exceptions;
 
 namespace Task_2._1._2.Figures
 {
@@ -30,7 +31,12 @@ namespace Task_2._1._2.Figures
             var lineC = new Line(C, D).Length;
             var lineD = new Line(A, D).Length;
             if (Length != lineB || Length != lineC || Length != lineD)
-                throw new Exception("Стороны неравны");                         
+                throw new LineException("Стороны неравны");
+            if (Math.Abs((C.CoordinateX - B.CoordinateX) * (A.CoordinateX - B.CoordinateX) +
+                (C.CoordinateY - B.CoordinateY) * (A.CoordinateY - B.CoordinateY)) > Math.E &&
+                Math.Abs((C.CoordinateX - D.CoordinateX)*(A.CoordinateX-D.CoordinateX))+
+                (C.CoordinateY - D.CoordinateY)*(A.CoordinateY-D.CoordinateY) > Math.E)
+                throw new CornerException("Углы квадрата должны быть прямыми");
         }
 
         public override double GetArea() => Length * Length;
