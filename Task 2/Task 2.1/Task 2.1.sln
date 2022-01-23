@@ -7,7 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task 2.1", "Task 2.1", "{C2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task 2.1.1", "Task 2.1.1\Task 2.1.1.csproj", "{1BCDC72E-37BC-4667-A7A5-69A1DBD84760}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task 2.1.2", "Task 2.1.2\Task 2.1.2.csproj", "{EAEDDEDE-EA63-4A5E-8C35-9C7A74663829}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task 2.1.2", "Task 2.1.2\Task 2.1.2.csproj", "{EAEDDEDE-EA63-4A5E-8C35-9C7A74663829}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task 2.2", "Task 2.2", "{7AEC4B3B-CAAA-4229-8297-24B0B2F5FCBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
