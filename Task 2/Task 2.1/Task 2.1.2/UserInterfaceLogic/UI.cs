@@ -92,9 +92,9 @@ namespace Task_2._1._2.UserInterfaceLogic
             {
                 figures.Add(new Circle(x, y, r));
             }
-            catch
+            catch (Exception ex)
             {
-                Console.WriteLine("Радиус не может быть меньше или равен 0");
+                Console.WriteLine(ex.Message);
                 Console.WriteLine("Фигура не была создана");
             }            
         }
@@ -110,9 +110,9 @@ namespace Task_2._1._2.UserInterfaceLogic
             {
                 figures.Add(new Ring(new Circle(x, y, inner), new Circle(x, y, outer)));
             }
-            catch
+            catch (Exception ex)
             {
-                Console.WriteLine("Внутренний радиус больше внешнего");
+                Console.WriteLine(ex.Message);
                 Console.WriteLine("Фигура не была создана");
             }           
         }
@@ -173,8 +173,17 @@ namespace Task_2._1._2.UserInterfaceLogic
             double xB = inputCorner('B', 'x');
             double yB = inputCorner('B', 'y');
             double xC = inputCorner('C', 'x');
-            double yC = inputCorner('C', 'y');           
-            figures.Add(new Triangle(new Point(xA, yA), new Point(xB, yB), new Point(xC, yC)));
+            double yC = inputCorner('C', 'y');  
+            try
+            {
+                figures.Add(new Triangle(new Point(xA, yA), new Point(xB, yB), new Point(xC, yC)));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Фигура не была создана");
+            }
+            
         }
         private double inputCenter(char c)
         {

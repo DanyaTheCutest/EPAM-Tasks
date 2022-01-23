@@ -8,5 +8,6 @@ namespace Task_2._2._1.Bonuses
 {
     public abstract class Bonus
     {
+        
     }
 }
