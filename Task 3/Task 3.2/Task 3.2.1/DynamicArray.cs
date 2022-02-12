@@ -13,7 +13,7 @@ namespace Task_3._2._1
         public int Length { get; private set; } = 0;      
         public int Capacity 
         {
-            get => Capacity;
+            get => array.Length;
             set
             {
                 Array.Resize(ref array, value);
@@ -35,34 +35,38 @@ namespace Task_3._2._1
         }
 
         public DynamicArray(IEnumerable<T> collection)
-        {
-            Capacity = collection.Count();
+        {            
             array = new T[collection.Count()];
             collection.ToArray<T>().CopyTo(array,0);
+            Capacity = array.Length;
         }
 
         public void Add(T item)
         {
             if (Length == 0)
+            {
                 array[0] = item;
+                Length++;
+            }
             else if (Length == Capacity)
             {
                 Array.Resize(ref array, Capacity * 2);
-                array[Length + 1] = item;
+                array[Length] = item;
                 Length++;
             }
             else
             {
-                array[Length + 1] = item;
+                array[Length] = item;
                 Length++;
             }               
         }
 
         public void AddRange(IEnumerable<T> collection)
         {
-            if (collection.Count() > Capacity)
+            var count = collection.Count();
+            if (count > Capacity)
             {
-                Capacity += collection.Count();
+                Capacity += count;
                 Array.Resize(ref array, Capacity);
             }
             foreach (var item in collection)
@@ -73,8 +77,9 @@ namespace Task_3._2._1
 
         public bool Remove(int index)
         {
-            if (index < 0 || index > Length)
-                return false;
+            if (index < 0 || index >= Length)            
+                throw new ArgumentException();
+                            
             for (int i = index; i < Length-1; i++)
             {
                 array[i] = array[i + 1];
@@ -94,51 +99,44 @@ namespace Task_3._2._1
                 array[i] = array[i - 1];
             }
             array[index] = item;
+            Length++;
             return true;
         }
 
         public T this [int i]
         {
             get
-            {
-                if (i > Length)
-                    throw new ArgumentException();
+            {                             
                 if (i < 0)
                 {
                     i *= -1;
-                    if (i > Length)
-                        throw new ArgumentException();
-                    return array[Length - i];
+                    return array[^i];
                 }
-                else 
-                    return array[i];
+                return array[i];
             }
             set
-            {
-                if (i > Length)
-                    throw new ArgumentException();
+            {               
                 if (i < 0)
                 {
-                    i *= -1;
-                    if (i > Length)
-                        throw new ArgumentException();
-                    array[Length - i] = value;
+                    i *= -1;                    
+                    array[^i] = value;
                 }
                 else
                     array[i] = value;
             }
         }
 
-
-
-        public IEnumerator<T> GetEnumerator()
+        public virtual IEnumerator<T> GetEnumerator()
         {
-            yield return (T)array.GetEnumerator();
+            for (int i = 0; i < Length; i++)
+            {
+                yield return array[i];
+            }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return array.GetEnumerator();
+            return GetEnumerator();
         }
 
         public object Clone()
