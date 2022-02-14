@@ -6,7 +6,8 @@ namespace Task_3._3._3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Client client1 = new Client("Sam", PizzaType.Pepperoni);
+            var client2 = new Client("Fred", PizzaType.Mexican);
         }
     }
 }
