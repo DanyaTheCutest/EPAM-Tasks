@@ -8,9 +8,9 @@ namespace Task_3._1._2
 {
     public class Analysis
     {
+        private string _maxWord = "";
         public string Input { get; init; }
-        List<string> words = new List<string>();
-        List<int> count = new List<int>();
+        Dictionary<string, int> words = new Dictionary<string, int>();
         private int _index = 0;
         public Analysis(string input)
         {
@@ -33,28 +33,26 @@ namespace Task_3._1._2
                 if (char.IsLetterOrDigit(arr[i]))
                     word += arr[i].ToString();
                 
-                else if (!words.Contains(word))
+                else if (!words.ContainsKey(word))
                 {
-                    words.Add(word);
-                    count.Add(1);
+                    words.Add(word,1);
                     word = "";
                 } 
                 else 
                 {
-                    count[words.IndexOf(word)]++;
+                    words[word]++;
                     word = "";
                 }
                 if (i == arr.Length - 1)
                 {
-                    if (!words.Contains(word))
+                    if (!words.ContainsKey(word))
                     {
-                        words.Add(word);
-                        count.Add(1);
+                        words.Add(word,1);
                         word = "";
                     }
                     else
                     {
-                        count[words.IndexOf(word)]++;
+                        words[word]++;
                         word = "";
                     }
                 }
@@ -63,25 +61,26 @@ namespace Task_3._1._2
             var max = FindMax();                        
             if (max <= 1)
                 return "Congrats, you are the originality itself";
-            else return $"Not really original :( The word {words[_index]} appears {max} times";
+            else return $"Not really original :( The word {_maxWord} appears {max} times";
         }
 
         private void Validate(string input)
         {
-            if (input == "" || input == null)
+            if (string.IsNullOrEmpty(input))
                 throw new ArgumentException("The string can not be empty");
         }
 
         private int FindMax()
         {
             int max = 1;
-            for (int i = 0; i < words.Count; i++)
+            foreach (var item in words)
             {
-                if (count[i] > max)
+                if (item.Value > max)
                 {
-                    max = count[i];
-                    _index = i;
-                }                   
+                    max = item.Value;
+                    _index++;
+                    _maxWord = item.Key;
+                }
             }
             return max;
         }       
