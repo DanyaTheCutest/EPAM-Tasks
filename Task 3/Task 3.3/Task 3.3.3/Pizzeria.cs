@@ -7,13 +7,7 @@ using System.Threading.Tasks;
 
 namespace Task_3._3._3
 {
-    public enum PizzaType
-    {
-        Pepperoni,
-        Meat,
-        Mexican
-    }
-    public static class Pizzeria
+    public class Pizzeria
     {
         public static void Cook(PizzaType pizza, string name)
         {
