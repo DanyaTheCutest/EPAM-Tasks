@@ -77,8 +77,8 @@ namespace Task_3._2._1
 
         public bool Remove(int index)
         {
-            if (index < 0 || index >= Length)            
-                throw new ArgumentException();
+            if (index < 0 || index >= Length)
+                return false;
                             
             for (int i = index; i < Length-1; i++)
             {
@@ -91,7 +91,7 @@ namespace Task_3._2._1
         public bool Insert(T item, int index)
         {
             if (index < 0 || index > Length)
-                throw new ArgumentOutOfRangeException();
+                return false;
             if (Length == Capacity)
                 Array.Resize(ref array, Capacity * 2);
             for (int i = index + 1; i < Length; i++)
