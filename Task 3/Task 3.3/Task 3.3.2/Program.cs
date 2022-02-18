@@ -15,33 +15,31 @@ namespace Task_3._3._2
         public static string GetLanguage(this string input)
         {
             input = input.ToLower();
-            var arr = input.ToCharArray();
-            byte[] b = System.Text.Encoding.Default.GetBytes(input);
-            int engCount = 0;
-            int rusCount = 0;
-            int numCount = 0;
+            bool eng = false;
+            bool rus = false;
+            bool num = false;
 
-            foreach (var item in b)
+            foreach (var item in input)
             {
-                if ((item >= 97) && (item <= 122)) engCount++;
-                if ((item >= 192) && (item <= 239)) rusCount++;                
+                if (item >= 'a' && item <= 'z')
+                    eng = true;
+                if (item >= 'а' && item <= 'я')
+                    rus = true;
+                if (item >= '0' && item <= '9')
+                    num = true;
             }
-            foreach (var item in arr)
+
+            switch (eng, rus, num)
             {
-                if (Char.IsDigit(item))
-                    numCount++;
+                case (true, false, false):
+                    return "English";
+                case (false, true, false):
+                    return "Russian";
+                case (false, false, true):
+                    return "Numbers";
+                default:
+                    return "Mixed";
             }
-            if (numCount != 0 && (rusCount != 0 || engCount != 0))
-                return "Mixed";
-            if (numCount != 0 && rusCount == 0 && engCount == 0)
-                return "Numbers";
-            if (rusCount != 0 && engCount != 0)
-                return "Mixed";
-            if (engCount != 0 && rusCount == 0)
-                return "English";
-            if (rusCount != 0 && engCount == 0)
-                return "Russian";
-            return "";
         }
     }
 }
