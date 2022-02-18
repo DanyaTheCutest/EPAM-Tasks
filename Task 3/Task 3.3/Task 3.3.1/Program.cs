@@ -7,11 +7,11 @@ namespace Task_3._3._1
     {
         static void Main(string[] args)
         {
-            var arr = new int[] { 1, 3, 3, 4, 5 };
+            var arr = new int[] { 1, 3, 5, 5, 5 };
 
-            Console.WriteLine(arr.FindAverage());
-            Console.WriteLine(arr.FindSum());
-            Console.WriteLine(arr.FindMostCommon());
+            Console.WriteLine($"Average is {arr.FindAverage()}");
+            Console.WriteLine($"Sum of elements is {arr.FindSum()}");
+            Console.WriteLine($"Most common is {arr.FindMostCommon()}");
 
             arr = arr.ApplyToMass((x) => x * x);
             Console.WriteLine();

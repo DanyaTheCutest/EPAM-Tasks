@@ -25,12 +25,29 @@ namespace Task_3._3._1
             {
                 sum += arr[i];
             }
-            return sum / arr.Count();
+            return sum / arr.Length;
         }
 
         public static int FindMostCommon(this int[] arr)
         {
-            return arr.GroupBy(x => x).OrderByDescending(g => g.Count()).First().Key;
+            var max = 1;
+            var maxItem = 0;
+            var dictionary = new Dictionary<int,int>();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (!dictionary.ContainsKey(arr[i]))
+                    dictionary.Add(arr[i], 1);
+                else dictionary[arr[i]]++;                
+            }
+            foreach (var item in dictionary)
+            {
+                if (item.Value > max)
+                {
+                    max = item.Value;
+                    maxItem = item.Key;
+                }
+            }
+            return maxItem;
         }
 
         public static int[] ApplyToMass(this int[] arr, Func<int, int> func)
