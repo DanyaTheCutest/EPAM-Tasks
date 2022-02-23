@@ -13,8 +13,8 @@ namespace Task_3._1._1
             int N = ReadInt();
             Console.Write("Type in the order of removal step: ");
             int excludeStep = ReadInt();
-            int n = 0;
-            var list = new DynamicArray<int>();
+            var list = new List<int>();
+            int n = N;
             for (int i = 0; i < N ; i++)
             {
                 list.Add(i + 1);
@@ -23,17 +23,34 @@ namespace Task_3._1._1
                 $" Starting to remove every {excludeStep} one");
 
 
-            foreach (var item in list)
+            for (int i = 0; i < N; i++)
             {
-                if (N <= 0)
+                if (n == 0)
                     break;
-                if (item % excludeStep == 0)
+                if (list.Count < excludeStep)
+                    break;
+                if (i == N)
+                    i = 0;
+                if (list.IndexOf(i) % excludeStep == 0)
                 {
-                    list.Remove(n);
-                    Console.WriteLine($"{item}t/d was removed. {N - 1} participants left.");
                     N--;
+                    Console.WriteLine($"{list[i]} was removed. {N} participants left.");
+                    list.Remove(i);
                 }
             }
+
+
+            //foreach (var item in list)
+            //{
+            //    if (N <= 0)
+            //        break;
+            //    if (list.IndexOf(item) % excludeStep == 0)
+            //    {
+            //        Console.WriteLine($"{item} was removed. {N - 1} participants left.");
+            //        list.Remove(item);
+            //        N--;
+            //    }
+            //}
             Console.WriteLine("The game is over." +
                 " Can not remove any more participants with the given step.");
         }   
