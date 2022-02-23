@@ -8,8 +8,11 @@ using System.Threading.Tasks;
 
 namespace Task_3._1._1
 {
-    public class DynamicArray<T> : IEnumerable
+    public class DynamicArray<T> : IEnumerator<T>, IEnumerable
     {
+        
+        public int position = -1;
+
         protected T[] array;
         public int Length { get; private set; } = 0;
         public int Capacity
@@ -18,6 +21,26 @@ namespace Task_3._1._1
             set
             {
                 Array.Resize(ref array, value);
+            }
+        }
+     
+        T IEnumerator<T>.Current
+        {
+            get
+            {
+                if (position == -1 || position >= Length)
+                    throw new ArgumentException();
+                return array[position];
+            }
+        }
+
+        public object Current
+        {
+            get
+            {
+                if (position == -1 || position >= Length)
+                    throw new ArgumentException();
+                return array[position];
             }
         }
 
@@ -89,11 +112,6 @@ namespace Task_3._1._1
             return true;
         }
 
-        public int IndexOf(T item)
-        {
-            return Array.IndexOf(array, item);
-        }
-
         public bool Insert(T item, int index)
         {
             if (index < 0 || index > Length)
@@ -155,6 +173,30 @@ namespace Task_3._1._1
             var arr = new T[Length];
             array.CopyTo(arr, 0);
             return arr;
+        }
+
+        public bool MoveNext()
+        {
+            if (position < Length - 1)
+                position++;               
+            else
+                Reset();
+            return true;
+        }
+
+        public int IndexOf(T item)
+        {
+            return Array.IndexOf(array, item);
+        }
+
+        public void Reset()
+        {
+            position = -1;
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
         }
     }
 }

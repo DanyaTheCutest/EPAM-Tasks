@@ -14,18 +14,15 @@ namespace Task_3._1._1
             Console.Write("Type in the order of removal step: ");
             int excludeStep = ReadInt();
             var list = new List<int>(N);
-            bool flag = true;
 
             for (int i = 0; i < N; i++)
             {
                 list.Add(i + 1);
             }
+            bool flag = true;
 
-            Console.WriteLine($"The group of participants has been generated." +
-                $" Starting to remove every {excludeStep} one");
-          
             while (flag)
-            {               
+            {
                 for (int i = 0; i < list.Count; i++)
                 {
                     if (list.IndexOf(list[i]) % excludeStep == 0)
