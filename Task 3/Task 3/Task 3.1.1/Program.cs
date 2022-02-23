@@ -20,15 +20,16 @@ namespace Task_3._1._1
                 list.Add(i + 1);
             }
             bool flag = true;
-
+            int step = 1;
             while (flag)
             {
-                for (int i = 0; i < list.Count; i++)
+                for (int i = 0; i < list.Count; i++,step++)
                 {
-                    if (list.IndexOf(list[i]) % excludeStep == 0)
+                    if (step == excludeStep)
                     {
                         Console.WriteLine($"{list[i]} was removed. {list.Count - 1} participants left.");
                         list.RemoveAt(i);
+                        step = 1;
                     }
                     if (list.Count < excludeStep)
                     {
