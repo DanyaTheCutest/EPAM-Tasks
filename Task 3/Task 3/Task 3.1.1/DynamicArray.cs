@@ -89,6 +89,11 @@ namespace Task_3._1._1
             return true;
         }
 
+        public int IndexOf(T item)
+        {
+            return Array.IndexOf(array, item);
+        }
+
         public bool Insert(T item, int index)
         {
             if (index < 0 || index > Length)

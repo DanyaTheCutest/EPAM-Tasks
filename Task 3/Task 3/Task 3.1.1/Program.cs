@@ -13,44 +13,34 @@ namespace Task_3._1._1
             int N = ReadInt();
             Console.Write("Type in the order of removal step: ");
             int excludeStep = ReadInt();
-            var list = new List<int>();
-            int n = N;
-            for (int i = 0; i < N ; i++)
-            {
-                list.Add(i + 1);
-            }
-            Console.WriteLine($"The group of participants has been generated." +
-                $" Starting to remove every {excludeStep} one");
-
+            var list = new List<int>(N);
+            bool flag = true;
 
             for (int i = 0; i < N; i++)
             {
-                if (n == 0)
-                    break;
-                if (list.Count < excludeStep)
-                    break;
-                if (i == N)
-                    i = 0;
-                if (list.IndexOf(i) % excludeStep == 0)
+                list.Add(i + 1);
+            }
+
+            Console.WriteLine($"The group of participants has been generated." +
+                $" Starting to remove every {excludeStep} one");
+          
+            while (flag)
+            {               
+                for (int i = 0; i < list.Count; i++)
                 {
-                    N--;
-                    Console.WriteLine($"{list[i]} was removed. {N} participants left.");
-                    list.Remove(i);
+                    if (list.IndexOf(list[i]) % excludeStep == 0)
+                    {
+                        Console.WriteLine($"{list[i]} was removed. {list.Count - 1} participants left.");
+                        list.RemoveAt(i);
+                    }
+                    if (list.Count < excludeStep)
+                    {
+                        flag = false;
+                        break;
+                    }
                 }
             }
 
-
-            //foreach (var item in list)
-            //{
-            //    if (N <= 0)
-            //        break;
-            //    if (list.IndexOf(item) % excludeStep == 0)
-            //    {
-            //        Console.WriteLine($"{item} was removed. {N - 1} participants left.");
-            //        list.Remove(item);
-            //        N--;
-            //    }
-            //}
             Console.WriteLine("The game is over." +
                 " Can not remove any more participants with the given step.");
         }   
