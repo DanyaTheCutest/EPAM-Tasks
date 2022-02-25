@@ -10,6 +10,6 @@ namespace Task_3._3._3
     {
         Pepperoni,
         Meat,
-        Mexican
+        Mexican,
     }
 }
