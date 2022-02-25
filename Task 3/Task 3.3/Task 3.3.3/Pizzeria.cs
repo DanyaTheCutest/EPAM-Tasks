@@ -9,15 +9,11 @@ namespace Task_3._3._3
 {
     public class Pizzeria
     {
-        public delegate void CookHandler(string message);
-        public event CookHandler Notify;
-        public async void Cook(Client client, Pizza? pizza)
+        public event Action<string> Notify;
+        public async Task Cook(Client client, Pizza? pizza)
         {
             await Task.Delay(TimeSpan.FromSeconds(5));
-            await Task.Run(() =>
-            {
-                Notify?.Invoke($"{pizza} for {client.Name} is ready!");
-            });
+            Notify?.Invoke($"{pizza} for {client.Name} is ready!");
         }
     }
 }
