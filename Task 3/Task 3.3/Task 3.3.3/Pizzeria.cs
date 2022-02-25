@@ -13,9 +13,9 @@ namespace Task_3._3._3
         public event CookHandler Notify;
         public async void Cook(Client client, Pizza? pizza)
         {
+            await Task.Delay(TimeSpan.FromSeconds(5));
             await Task.Run(() =>
             {
-                Thread.Sleep(TimeSpan.FromSeconds(5));
                 Notify?.Invoke($"{pizza} for {client.Name} is ready!");
             });
         }
