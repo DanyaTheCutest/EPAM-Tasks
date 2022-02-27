@@ -5,15 +5,15 @@ namespace Task_3._3._3
 {
     class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             var pizzeria = new Pizzeria();
             pizzeria.Notify += DisplayMessage;
             while (true)
             {
                 var name = GetName();
-                var pizza = GetPizzaType();
-                await pizzeria.Cook(new Client(name), pizza);
+                var pizza = GetPizzaType();                
+                pizzeria.Cook(new Client(name), pizza);
             }
         }
 
