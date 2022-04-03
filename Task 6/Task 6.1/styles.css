@@ -3,6 +3,7 @@
     width: 200px;
     border: solid black 1px;
     border-radius: 13px;
+    box-shadow: 6px 6px 0px #880000;
 }
 ul{
     margin-top: 8px;
