@@ -1,0 +1,26 @@
+.container{
+    background-color: #f9e497;
+    width: 200px;
+    border: solid black 1px;
+    border-radius: 13px;
+    box-shadow: 6px 6px 0px #880000;
+}
+ul{
+    margin-top: 8px;
+    list-style-type: none;
+    padding-left: 7px;
+    padding-right: 10px;
+    margin-right: 0;
+    margin-bottom: 5px;
+}
+li{
+    color: #8a0726;
+    font-size: 12px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 25px;
+    text-align: left;
+    margin-left: 0;
+    font-weight: bold;
+    
+
+}

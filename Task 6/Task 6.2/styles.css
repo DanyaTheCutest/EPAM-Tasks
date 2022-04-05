@@ -1,0 +1,82 @@
+div{
+    margin: -8px;
+    width: 500px;
+    background-color: #0690cf;
+    border-color: #0075b2;
+    border-style: solid;
+    border-width: 4px;
+}
+
+.reg-text{
+    font-size: 30px;
+    color: #f5fdfe;
+    font-family: Arial;
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.mail-text{
+    color: #f5fdfe;
+    font-size: 18px;
+    font-family: Arial;
+    margin-left: 25px;
+    margin-top: 40px;
+    margin-bottom: 3px;
+}
+
+.mail-input{
+    width: 400px;
+    margin-left: 25px;
+    margin-bottom: 0;
+    padding-bottom: 8px;
+    border: none;
+}
+
+.pswd-text{
+    font-size: 18px;
+    font-family: Arial;
+    margin-left: 25px;
+    color: #f5fdfe;
+    margin-bottom: 3px;
+}
+
+.pswd-again{
+    font-size: 18px;
+    font-family: Arial;
+    color: #f5fdfe;
+    margin-left: 147px;
+    margin-bottom: 3px;
+}
+
+.pswd{
+    margin-bottom: 3px;
+    margin-top: 30px;
+}
+
+.pswd-input{
+    padding-top: -10px;
+    margin-left: 25px;
+    padding-bottom: 8px;
+    margin-bottom: 30px;
+    padding-right: 14px;
+    border: none;
+}
+
+.send{
+    background-color: #ffdf7f;
+    color: #591547;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+    border: none;
+    border-radius: 2px;
+}
+
+
+hr{
+    margin: 25px 0px;
+}
