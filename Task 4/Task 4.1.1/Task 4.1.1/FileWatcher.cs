@@ -50,9 +50,9 @@ namespace Task_4._1._1
                 }
         }
 
-        private void Watch()
+        private async void Watch()
         {
-            var watcher = new FileSystemWatcher(_storagePath);
+            using var watcher = new FileSystemWatcher(_storagePath);
             watcher.Renamed += new RenamedEventHandler(OnRenamed);
             watcher.Deleted += new FileSystemEventHandler(OnDeleted);
             watcher.Created += new FileSystemEventHandler(OnCreated);
@@ -65,11 +65,14 @@ namespace Task_4._1._1
 
             while (true)
             {
-                Thread.Sleep(1000);
+                DisplayMessage?.Invoke("Type 1 to exit");
+                if (ReadInt() == 1)
+                    Environment.Exit(0);
+                await Task.Delay(1000);
             }
         }
 
-        private void Rollback()
+        private async void Rollback()
         {
             DisplayMessage?.Invoke("Enter the date of target stage as yyyy.MM.dd_HH-mm-ss: ");
             var date = input?.Invoke();
@@ -82,8 +85,27 @@ namespace Task_4._1._1
 
             CopyDirectory(_backupPath + "\\" + date, _storagePath);
             DisplayMessage?.Invoke("Rollback succesful");
-            Thread.Sleep(1000);
-            Environment.Exit(0);
+            
+            DisplayMessage?.Invoke(string.Join(Environment.NewLine, "1: Back to options", "2: Exit"));
+            var flag = true;
+            while (flag)
+            {
+                switch (ReadInt())
+                {
+                    case 1:
+                        Start();
+                        flag = false;
+                        break;
+                    case 2:
+                        Environment.Exit(0);
+                        flag = false;
+                        break;
+                    default:
+                        DisplayMessage?.Invoke(("Invalid input"));
+                        break;
+                }
+            }
+            
         }
 
         private int ReadInt()
