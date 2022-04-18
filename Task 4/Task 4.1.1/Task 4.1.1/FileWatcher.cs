@@ -29,7 +29,7 @@ namespace Task_4._1._1
         public void Start()
         {
             DisplayMessage?.Invoke(string.Join(Environment.NewLine,
-                "Choose option: ", "1: Track changes", "2: Rollback changes"));
+                "Choose option: ", "1: Track changes", "2: Rollback changes", "3: Exit"));
 
             var flag = true;
             while (flag)
@@ -43,6 +43,10 @@ namespace Task_4._1._1
                     case 2:
                         flag = false;
                         Rollback();
+                        break;
+                    case 3:
+                        flag = false;
+                        Environment.Exit(0);
                         break;
                     default:
                         DisplayMessage?.Invoke("Invalid input");
@@ -72,7 +76,7 @@ namespace Task_4._1._1
             }
         }
 
-        private async void Rollback()
+        private void Rollback()
         {
             DisplayMessage?.Invoke("Enter the date of target stage as yyyy.MM.dd_HH-mm-ss: ");
             var date = input?.Invoke();
