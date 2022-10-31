@@ -1,10 +1,20 @@
 ﻿using Task8.BLL.Interfaces;
 using Task8.Entities;
+using Task8.DAL.Json;
+using Task8.DAL.Json.Interfaces;
 
 namespace Task8.BL
 {
     public class Logic : IBLL
     {
+        private IUser _user;
+        private IAward _award;
+
+        public Logic(IUser user, IAward award)
+        {
+            _user = user;
+            _award = award;
+        }
         public Award CreateAward(string title)
         {
             throw new NotImplementedException();

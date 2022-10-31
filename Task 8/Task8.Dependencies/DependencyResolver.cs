@@ -1,18 +1,23 @@
-﻿using Task8.DALJson.Interfaces;
-using Task8.DALJson;
+﻿using Task8.DAL.Json.Interfaces;
+using Task8.DAL.Json;
+using Task8.BLL.Interfaces;
+using Task8.BL;
 
 namespace Task8.Dependencies
 {
     public class DependencyResolver
     {
-        private DependencyResolver _instance;
-        public DependencyResolver Instance => _instance ??= new DependencyResolver();
+        private static DependencyResolver _instance;
+        public static DependencyResolver Instance => _instance ??= new DependencyResolver();
         private DependencyResolver()
         {
 
         }
 
-        private IUser _user => new DALJson();
+        public IUser User => new DALJson();
 
+        public IAward Award => new DALJson();
+
+        public IBLL BLL => new Logic(User, Award);
     }
 }

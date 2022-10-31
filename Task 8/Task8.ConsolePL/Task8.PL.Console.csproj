@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Task8.BL\Task8.BL.csproj" />
+    <ProjectReference Include="..\Task8.Dependencies\Task8.Dependencies.csproj" />
   </ItemGroup>
 
 </Project>

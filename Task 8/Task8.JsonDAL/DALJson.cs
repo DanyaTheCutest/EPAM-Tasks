@@ -1,7 +1,7 @@
 ﻿using Task8.DAL.Json.Interfaces;
 using Task8.Entities;
 
-namespace Task8.DAL.Json.Json
+namespace Task8.DAL.Json
 {
     public class DALJson : IAward, IUser
     {
